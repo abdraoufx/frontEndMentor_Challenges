@@ -1,0 +1,97 @@
+/* Start Global Rules */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Manrope", sans-serif;
+}
+@media (max-width: 600px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* Start Global Rules */
+
+/* Start Vars */
+:root {
+  --l-cyan: hsl(193, 38%, 86%);
+  --ne-green: hsl(150, 100%, 66%);
+  --gr-blue: #313a49;
+  --dk-gr-blue: #202632;
+  --tr-D: 0.2s;
+}
+/* End Vars */
+
+/* Start Styling Main Page */
+.container {
+  height: 100vh;
+  background-color: var(--dk-gr-blue);
+  width: 100vw;
+}
+.container .main-box {
+  position: relative;
+  background-color: var(--gr-blue);
+  width: 400px;
+  height: fit-content;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .main-box .advice-id {
+  color: var(--ne-green);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+.container .main-box q.quote {
+  color: var(--l-cyan);
+  font-size: 28px;
+}
+.container .main-box .foot {
+  background-image: url("../images/pattern-divider-desktop.svg");
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 15px;
+}
+.container .main-box .change {
+  position: absolute;
+  bottom: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--ne-green);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--tr-D);
+}
+.container .main-box .change:hover {
+  box-shadow: 0px 0px 20px 1px var(--ne-green);
+}
+.container .main-box .change img {
+  height: 20px;
+}
+/* End Styling Main Page */

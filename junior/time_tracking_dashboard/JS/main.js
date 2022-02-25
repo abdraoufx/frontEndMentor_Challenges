@@ -1,4 +1,4 @@
-const dataApi = "http://127.0.0.1:5500/data.json";
+const dataApi = "https://abdraoufx.github.io/frontEndMentor_Challenges/junior/time_tracking_dashboard/data.json";
 const title = document.querySelectorAll(".key");
 const filters = document.querySelectorAll(
   ".container .boxes .profile .body ul.filter li"

@@ -1,1 +1,1 @@
-### This is The Directory Of Junior Level Challenges
+### This is The Repo Of Junior Level Challenges

@@ -1,0 +1,212 @@
+/* Start Global Rule */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  min-height: 100vh;
+}
+@media (max-width: 895px) {
+  .container {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+ul {
+  list-style: none;
+}
+/* End Global Rules */
+
+/* Start Vars */
+:root {
+  --vlg-blue: hsl(240, 78%, 98%);
+  --lg-blue: hsl(234, 14%, 74%);
+  --gr-blue: hsl(233, 13%, 49%);
+  --dkg-blue: hsl(232, 13%, 33%);
+  --white: hsl(0, 0%, 100%);
+  --tr-D: 0.3s;
+}
+/* End Vars */
+
+/* Start Styling Main Page */
+.container {
+  background-color: var(--vlg-blue);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 55px;
+}
+.container h2.title {
+  color: var(--gr-blue);
+  font-size: 30px;
+}
+@media (max-width: 895px) {
+  .container h2.title {
+    margin-bottom: 30px;
+  }
+}
+.container .choose {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.container .choose span {
+  color: var(--lg-blue);
+  font-size: 14px;
+}
+.container .choose .toggle {
+  padding: 4px;
+  height: 30px;
+  width: 60px;
+  background-color: #8389e1;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.container .choose .toggle:hover {
+  background-color: hsl(236, 72%, 79%);
+}
+.container .choose .toggle > .ball {
+  width: 23px;
+  height: 73%;
+  background-color: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  transition: var(--tr-D);
+}
+.container .choose .toggle.left > .ball {
+  left: 5px;
+}
+.container .choose .toggle.right > .ball {
+  right: 5px;
+}
+.container .boxes {
+  display: grid;
+  grid-template-columns: 300px 270px 300px;
+  grid-template-rows: 400px;
+  justify-content: center;
+}
+@media (max-width: 895px) {
+  .container .boxes {
+    grid-template-columns: repeat(1, 280px);
+    gap: 30px;
+    grid-template-rows: repeat(3, 450px);
+  }
+}
+.container .boxes > div {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 35px;
+  font-size: 14px;
+  box-shadow: rgb(17 12 46 / 10%) 0px 48px 93px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .boxes > div h3.title {
+  color: var(--gr-blue);
+}
+.container .boxes > div span.price {
+  font-size: 50px;
+  color: var(--dkg-blue);
+  margin-bottom: 10px;
+}
+.container .boxes > div ul.info {
+  display: flex;
+  flex-direction: column;
+}
+.container .boxes > div ul.info li {
+  position: relative;
+  color: var(--gr-blue);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.container .boxes > div ul.info li::before,
+.container .boxes > div ul.info li:last-of-type::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  background-color: var(--gr-blue);
+  opacity: 0.3;
+}
+.container .boxes > div ul.info li::before {
+  top: -12px;
+}
+.container .boxes > div ul.info li:last-of-type::after {
+  bottom: -12px;
+}
+.container .boxes > div > button {
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%) 5%,
+    hsl(237, 63%, 64%)
+  );
+  border: none;
+  display: block;
+  color: var(--white);
+  height: 35px;
+  border-radius: 4px;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  word-spacing: 3px;
+  transition: 0.3s ease-in-out;
+  border: 1px solid hsl(237, 63%, 64%);
+}
+.container .boxes > div > button:hover {
+  background-image: none;
+  background-color: var(--white);
+  color: hsl(237, 63%, 64%);
+}
+.container .boxes > div.special {
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  transform: scale(1.1);
+  box-shadow: none;
+}
+@media (max-width: 895px) {
+  .container .boxes > div.special {
+    transform: scale(1);
+  }
+}
+.container .boxes > div.special h3.title {
+  color: var(--white);
+}
+.container .boxes > div.special span.price {
+  color: var(--white);
+}
+.container .boxes > div.special ul.info li {
+  color: var(--vlg-blue);
+}
+.container .boxes > div.special ul.info li::before,
+.container .boxes > div.special ul.info li:last-of-type::after {
+  background-color: var(--vlg-blue);
+  opacity: 0.4;
+}
+.container .boxes > div.special > button {
+  background-color: var(--white);
+  background-image: none;
+  color: hsl(237, 63%, 64%);
+  cursor: pointer;
+  border: 1px solid var(--white);
+}
+.container .boxes > div.special > button:hover {
+  background-color: hsl(237, 63%, 64%);
+  color: var(--white);
+}
+/* End Styling Main Page */

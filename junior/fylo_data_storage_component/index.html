@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fylo Data Storage</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main center">
+      <div class="content">
+        <div class="one">
+          <img src="images/logo.svg" alt="" />
+          <div class="icons">
+            <img src="images/icon-document.svg" alt="" />
+            <img src="images/icon-folder.svg" alt="" />
+            <img src="images/icon-upload.svg" alt="" />
+          </div>
+        </div>
+        <div class="two">
+          <h1>You’ve used <span class="used">0 GB</span> of your storage</h1>
+          <div class="select">
+            <input
+              type="range"
+              id="range"
+              min="0"
+              max="1000"
+              value="0"
+              step="1"
+            />
+            <span class="min">0 GB</span>
+            <span class="max">1000 GB</span>
+          </div>
+          <div class="result">
+            <p><span class="left">1000</span>GB left</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

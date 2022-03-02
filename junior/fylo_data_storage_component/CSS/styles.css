@@ -1,0 +1,195 @@
+/* Start Global Rules */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* End Global Rules */
+
+/* Start Vars */
+:root {
+  --p-blue: hsl(243, 100%, 93%);
+  --g-blue: hsl(229, 7%, 55%);
+  --d-blue: hsl(228, 56%, 26%);
+  --vd-blue: hsl(229, 57%, 11%);
+}
+/* End Vars */
+
+/* Start Styling Main Page */
+.main {
+  height: 100vh;
+  background-color: var(--vd-blue);
+  background-image: url("../images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% 50%;
+}
+@media (max-width: 960px) {
+  .main {
+    background-color: url("../images/bg-mobile.png") !important;
+    background-position: center !important;
+    background-size: cover !important;
+  }
+}
+.main .content {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+}
+@media (max-width: 960px) {
+  .main .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.main .content .one,
+.main .content .two {
+  background-color: var(--d-blue);
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 2px rgba(12, 18, 44, 0.219);
+  padding: 30px;
+}
+@media (max-width: 960px) {
+  .main .content .one,
+  .main .content .two {
+    width: 350px !important;
+    height: 180px !important;
+  }
+}
+.main .content .one {
+  width: 350px;
+  height: 180px;
+  border-top-right-radius: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main .content .one > img {
+  width: 120px;
+}
+.main .content .one .icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.main .content .one .icons img {
+  background-color: var(--vd-blue);
+  width: 42px;
+  height: 41px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.main .content .two {
+  width: 570px;
+  height: 130px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.main .content .two > h1 {
+  color: var(--p-blue);
+  font-size: 14px;
+  font-weight: 400;
+  word-spacing: 1px;
+}
+.main .content .two > h1 > span.quan {
+  font-weight: 800;
+}
+.main .content .two .select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main .content .two .select input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  background-color: var(--vd-blue);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  background-size: 0%;
+  background-repeat: no-repeat;
+  padding: 1px;
+}
+.main .content .two .select input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.main .content .two .select input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  border-radius: 15px;
+  padding: 2px;
+  cursor: pointer;
+}
+.main .content .two .select input[type="range"]:focus {
+  outline: none;
+}
+.main .content .two .select span.min,
+.main .content .two .select span.max {
+  color: white;
+}
+.main .content .two .result {
+  background-color: white;
+  position: absolute;
+  right: 35px;
+  top: -32px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  font-family: "Raleway", sans-serif;
+  border-radius: 6px;
+}
+@media (max-width: 960px) {
+  .main .content .two .result {
+    top: 138px;
+    right: 100px;
+  }
+}
+.main .content .two::before {
+  content: "";
+  position: absolute;
+  border-width: 30px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  right: 35px;
+  top: -13px;
+}
+@media (max-width: 960px) {
+  .main .content .two::before {
+    display: none;
+  }
+}
+.main .content .two .result p {
+  display: flex;
+  align-items: center;
+}
+.main .content .two .result p > span.left {
+  font-size: 35px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+/* End Styling Main Page */

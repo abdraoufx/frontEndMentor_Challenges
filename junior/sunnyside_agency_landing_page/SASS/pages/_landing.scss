@@ -17,7 +17,7 @@
   @include breakP() {
     gap: 55px;
   }
-  min-height: 470px;
+  min-height: 300px;
   padding: 60px;
   h1.title {
     text-transform: uppercase;
@@ -28,6 +28,8 @@
   }
   img {
     height: 80px;
+    position: relative;
+    bottom: 30px;
     animation: arrow-Down-Up 1s infinite;
     cursor: not-allowed;
     @include breakP() {

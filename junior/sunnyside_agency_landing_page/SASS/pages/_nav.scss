@@ -1,0 +1,99 @@
+// Importing Vars
+@import "../variables/variables";
+
+// Importing Mixins
+@import "../helpers/mixins";
+
+.navbar {
+  background-color: $softBlue;
+  padding: 10px 0;
+  font-family: $fBarlaw;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    ul.links {
+      display: flex;
+      align-items: center;
+      &.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-48%);
+        top: 82px;
+        width: calc(100% - 90px);
+        padding: 20px;
+        z-index: 10;
+        > li {
+          padding: 15px;
+          &:last-of-type {
+            margin-bottom: 7px;
+          }
+          > a {
+            color: $dkGrBlue;
+          }
+        }
+        &.mobile > button.contact {
+          background-color: $yellow;
+          margin-left: 0;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: -22px;
+          right: 0px;
+          border-width: 16px;
+          border-style: solid;
+          border-color: transparent $white $white transparent;
+        }
+      }
+      @include breakP() {
+        & {
+          display: none;
+        }
+      }
+      li {
+        padding: 20px;
+        a {
+          color: $white;
+          font-size: 16px;
+        }
+      }
+      button.contact {
+        background-color: white;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 33px;
+        font-weight: bold;
+        padding: 1px 23px;
+        height: 45px;
+        cursor: pointer;
+        margin-left: 20px;
+        transition: $trDu;
+        &:hover {
+          color: $white;
+          background-color: $blue;
+        }
+      }
+    }
+    img.hamb {
+      cursor: pointer;
+      display: none;
+      @include breakP() {
+        display: block;
+      }
+      &.clicked {
+        opacity: 0.6;
+      }
+    }
+  }
+}

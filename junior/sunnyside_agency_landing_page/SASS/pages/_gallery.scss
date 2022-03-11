@@ -1,0 +1,10 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 25%);
+  @include breakP() {
+    grid-template-columns: repeat(auto-fill, 50%);
+  }
+  img {
+    width: 100%;
+  }
+}

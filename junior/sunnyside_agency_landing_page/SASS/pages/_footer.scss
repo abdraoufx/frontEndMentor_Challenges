@@ -1,0 +1,46 @@
+// Importing Variables
+@import "../variables/variables";
+
+.footer {
+  padding: 70px 15px;
+  background-color: $footerBg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  font-family: $fBarlaw;
+  img.filter-green {
+    filter: invert(16%) sepia(281%) saturate(314%) hue-rotate(87deg)
+      brightness(47%) contrast(100%);
+    margin-bottom: 35px;
+    width: 135px;
+  }
+  ul.links {
+    display: flex;
+    gap: 55px;
+    margin-bottom: 70px;
+    li {
+      font-size: 18px;
+      a {
+        color: $modCyan;
+        transition: $trDu;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  .icons {
+    display: flex;
+    gap: 25px;
+    svg {
+      color: $desCyan;
+      cursor: pointer;
+      font-size: 20px;
+      transition: $trDu;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}

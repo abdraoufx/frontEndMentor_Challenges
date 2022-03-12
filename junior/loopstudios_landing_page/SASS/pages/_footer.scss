@@ -1,0 +1,99 @@
+footer {
+  background-color: $black;
+  min-height: 150px;
+  padding: 35px 100px;
+  font-family: $fAtala;
+  @include breakP() {
+    padding: 50px 70px;
+  }
+  div {
+    @include spBetween();
+    align-items: center;
+  }
+  .above {
+    margin-bottom: 20px;
+    @include breakP {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    img {
+      width: 150px;
+      @include breakP() {
+        margin-bottom: 45px;
+      }
+    }
+    .icons {
+      display: flex;
+      gap: 15px;
+      @include breakP() {
+        margin-bottom: -7px;
+        position: relative;
+        top: 200px;
+      }
+      a {
+        cursor: pointer;
+        position: relative;
+        &:hover::before {
+          width: 90%;
+          left: 50%;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+          transform: translateX(-50%);
+          height: 2px;
+          width: 0;
+          background-color: $white;
+          transition: $trDu;
+        }
+        svg {
+          color: $white;
+          font-size: 23px;
+        }
+      }
+    }
+  }
+  .below {
+    @include breakP {
+      flex-direction: column;
+      align-items: center;
+    }
+    ul.links {
+      display: flex;
+      gap: 25px;
+      @include breakP {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+        position: relative;
+        top: -45px;
+      }
+      a {
+        color: $white;
+        position: relative;
+        &:hover::before {
+          width: 50%;
+          left: 50%;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+          transform: translateX(-50%);
+          height: 2px;
+          width: 0;
+          background-color: $white;
+          transition: $trDu;
+        }
+      }
+    }
+    span.copyright {
+      color: $vry-Dk-Gray;
+      font-size: 12px;
+    }
+  }
+}

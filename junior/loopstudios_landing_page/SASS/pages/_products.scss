@@ -1,0 +1,166 @@
+.products {
+  padding-bottom: 120px;
+  .container {
+    .head {
+      display: flex;
+      justify-content: space-between;
+      font-family: $fJosefin;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      @include breakP() {
+        justify-content: center;
+      }
+      h1 {
+        font-weight: normal;
+        font-size: 35px;
+      }
+      button {
+        font-family: $fAtala;
+        font-weight: normal;
+        font-size: 13px;
+        word-spacing: 4px;
+        border: 2px solid $dk-Gray;
+        border-radius: 2px;
+        color: $black;
+        background-color: $white;
+        padding: 5px 35px;
+        @include center();
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: $trDu;
+        @include breakP() {
+          display: none;
+        }
+        &:hover {
+          background-color: $black;
+          color: $white;
+          border-color: $black;
+        }
+      }
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 23.6%);
+      grid-template-rows: repeat(2, minmax(380px, 1fr));
+      @include breakP() {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(8, 290px);
+        padding-bottom: 30px;
+      }
+      gap: 20px;
+      font-family: $fJosefin;
+      .image {
+        border-radius: 3px;
+        background-size: cover;
+        @include breakP() {
+          background-position: center;
+        }
+        text-transform: uppercase;
+        padding: 20px;
+        color: $white;
+        cursor: pointer;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        position: relative;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          @include overlay($black, 0.2);
+          transition: $trDu;
+        }
+        &:hover::before {
+          @include overlay($white, 0.6);
+        }
+        &.first {
+          background-image: url("../images/desktop/image-deep-earth.jpg");
+          @include breakP() {
+            background-image: url("../images/mobile/image-deep-earth.jpg");
+          }
+        }
+        &.second {
+          background-image: url("../images/desktop/image-night-arcade.jpg");
+          @include breakP() {
+            background-image: url("../images/mobile/image-night-arcade.jpg");
+          }
+        }
+        &.three {
+          background-image: url("../images/desktop/image-soccer-team.jpg");
+          @include breakP() {
+            background-image: url("../images/mobile/image-soccer-team.jpg");
+          }
+        }
+        &.four {
+          background-image: url("../images/desktop/image-grid.jpg");
+          @include breakP() {
+            background-image: url("../images/mobile/image-grid.jpg");
+          }
+        }
+        &.five {
+          background-image: url("../images/desktop/image-from-above.jpg");
+          @include breakP() {
+            background-image: url("../images/mobile/image-from-above.jpg");
+          }
+        }
+        &.six {
+          background-image: url("../images/desktop/image-pocket-borealis.jpg");
+          @include breakP() {
+            background-image: url("../images/mobile/image-pocket-borealis.jpg");
+          }
+        }
+        &.sev {
+          background-image: url("../images/desktop/image-curiosity.jpg");
+          @include breakP() {
+            background-image: url("../images/mobile/image-curiosity.jpg");
+          }
+        }
+        &.eight {
+          background-image: url("../images/desktop/image-fisheye.jpg");
+          @include breakP() {
+            background-image: url("../images/mobile/image-fisheye.jpg");
+          }
+        }
+        .text {
+          font-size: 27px;
+          position: relative;
+          z-index: 5;
+          transition: $trDu;
+        }
+        &:hover .text {
+          color: $black;
+        }
+      }
+    }
+  }
+  .foot {
+    display: none;
+    @include breakP() {
+      display: flex;
+      justify-content: center;
+    }
+    button {
+      font-family: $fAtala;
+      font-weight: normal;
+      font-size: 15px;
+      word-spacing: 4px;
+      border: 2px solid $dk-Gray;
+      border-radius: 2px;
+      color: $black;
+      background-color: $white;
+      padding: 10px 50px;
+      @include center();
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: $trDu;
+      &:hover {
+        background-color: $black;
+        color: $white;
+        border-color: $black;
+      }
+    }
+  }
+}

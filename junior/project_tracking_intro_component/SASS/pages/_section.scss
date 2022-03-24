@@ -1,0 +1,99 @@
+section {
+  .container {
+    @include spBetween();
+    overflow: hidden;
+    @include breakP() {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 25px;
+      gap: 90px;
+    }
+    .text {
+      .head {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 20px;
+        span.new {
+          background-color: #242942;
+          color: white;
+          font-weight: bold;
+          padding: 3px 8px;
+          border-radius: 25px;
+          text-transform: uppercase;
+          font-family: $f-Cond-Barlow;
+          font-size: 14px;
+        }
+        h4 {
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          font-weight: normal;
+          color: $grBlue;
+          font-family: $f-Barlow;
+          font-size: 13px;
+        }
+      }
+      h1 {
+        color: $vrDkBlue;
+        text-transform: uppercase;
+        font-family: $f-Cond-Barlow;
+        font-size: 64px;
+        line-height: 1;
+        margin-bottom: 25px;
+        @include breakP() {
+          font-size: 45px;
+        }
+      }
+      p {
+        margin-bottom: 40px;
+        color: $grBlue;
+        font-weight: bold;
+      }
+      .btns {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include breakP() {
+          padding-bottom: 50px;
+        }
+        button {
+          border: none;
+          background-color: $red;
+          color: $white;
+          text-transform: uppercase;
+          border-radius: 5px;
+          font-family: $f-Cond-Barlow;
+          display: block;
+          padding: 15px 25px;
+          font-weight: bold;
+          font-size: 15px;
+          cursor: pointer;
+          transition: $trDu;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        .see-more {
+          font-family: $f-Cond-Barlow;
+          a {
+            text-transform: uppercase;
+            color: $grBlue;
+            letter-spacing: 3px;
+            font-size: 14px;
+            cursor: default;
+          }
+        }
+      }
+    }
+    img {
+      max-width: 775px;
+      position: relative;
+      left: 215px;
+      @include breakP() {
+        order: -1;
+        left: 100px;
+        max-width: 600px;
+      }
+    }
+  }
+}

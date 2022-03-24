@@ -1,0 +1,14 @@
+// Importing Vars
+@import "./variables/variables";
+
+// Importing Global Rules
+@import "./layout/global-rules";
+
+// Importing Mixins
+@import "./helpers/mixins";
+
+// Importing Header
+@import "./pages/header";
+
+// Importin Section
+@import "./pages/section";

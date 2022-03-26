@@ -1,0 +1,33 @@
+.about {
+  background-color: $mainBg-Color;
+  padding-bottom: 9.375em;
+  .container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    @include breakP() {
+      grid-template-columns: 1fr;
+    }
+    row-gap: 5.6rem;
+    max-width: 1060px;
+    .box {
+      @include center();
+      flex-direction: column;
+      img {
+        max-width: 100%;
+        margin-bottom: 1.5625em;
+      }
+      h1 {
+        color: $white;
+        font-size: 1.25em;
+        margin-bottom: 0.625em;
+      }
+      p {
+        text-align: center;
+        font-size: 0.875em;
+        width: 350px;
+        line-height: 1.4;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+section.testim {
+  background-color: $mainBg-Color;
+  padding: 12.5em 0;
+  padding-bottom: 350px;
+  position: relative;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    place-items: center;
+    gap: 2.5em;
+    img.quote {
+      position: absolute;
+      left: 44px;
+      top: 21%;
+      z-index: 1;
+      @include breakP() {
+        left: 33px;
+        top: 13.5%;
+        width: 40px;
+      }
+    }
+    .card {
+      background-color: $testimBg;
+      padding: 2.5em 1.875em 1.25em;
+      border-radius: 5px;
+      z-index: 20;
+      p {
+        opacity: 0.9;
+        margin-bottom: 1.25em;
+      }
+      .foot {
+        display: flex;
+        align-items: center;
+        gap: 0.625em;
+        img {
+          width: 24px;
+          border-radius: 50%;
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          span.name {
+            color: $white;
+            font-weight: bold;
+            font-size: 0.8125rem;
+          }
+          span.job {
+            color: $white;
+            opacity: 0.8;
+            font-size: 0.6875rem;
+          }
+        }
+      }
+    }
+  }
+}

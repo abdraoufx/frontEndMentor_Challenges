@@ -1,0 +1,62 @@
+.intro {
+  background-color: $dkBlue;
+  .wrapper {
+    padding: 0 1.5rem;
+    @include center();
+    margin-bottom: 2rem;
+    img {
+      max-width: 100%;
+    }
+  }
+  .text {
+    padding: 0 1.5em;
+    @include center();
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1.25em;
+    @include breakP() {
+      background-color: $mainBg-Color;
+    }
+    h2.into_title {
+      color: $white;
+      max-width: 860px;
+      font-size: 2.9em;
+      @include breakP() {
+        font-size: 1.625em;
+      }
+    }
+    p.into_text {
+      max-width: 550px;
+      line-height: 1.5;
+      margin-top: 2.2rem;
+      font-size: 1.25em;
+      @include breakP() {
+        font-size: 1rem;
+        margin-bottom: 2.5em;
+      }
+    }
+  }
+  .start {
+    padding-bottom: 100px;
+    @include center();
+    @include breakP() {
+      background-color: $mainBg-Color;
+      margin-top: -1.25em;
+    }
+    button.get-s.btn {
+      cursor: pointer;
+      color: $white;
+      background-color: $blue;
+      border: none;
+      padding: 1.25em 5.3125em;
+      border-radius: 3.125em;
+      font-weight: bold;
+      font-size: 0.9375em;
+      transition: $trDu;
+      &:hover {
+        background-color: $cyan;
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+header {
+  padding-top: 3.125em;
+  @include breakP() {
+    padding-top: 1.25em;
+  }
+  padding-bottom: 4em;
+  background-color: $dkBlue;
+  .container {
+    max-width: 1300px;
+    @include spBeet();
+    @include breakP() {
+      padding: 15px;
+    }
+    img.logo {
+      max-width: 100%;
+      @include breakP() {
+        width: 100px;
+      }
+    }
+    nav {
+      ul.links {
+        display: flex;
+        gap: 50px;
+        @include breakP() {
+          gap: 25px;
+        }
+        li {
+          a {
+            position: relative;
+            color: $white;
+            opacity: 0.8;
+            transition: $trDu;
+            @include breakP() {
+              font-size: 11px;
+            }
+            &:focus {
+              outline: none;
+            }
+            &:hover {
+              opacity: 1;
+            }
+            &:hover::before {
+              width: 100%;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: 1px;
+              left: 0;
+              width: 0%;
+              height: 1px;
+              background-color: $white;
+              transition: $trDu;
+            }
+          }
+        }
+      }
+    }
+  }
+}

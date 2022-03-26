@@ -1,0 +1,36 @@
+// Importing Vars
+@import "./variables/variables";
+
+// Importing Global Rules
+@import "./layout/global-rules";
+
+// Importing Mixins
+@import "./helpers/mixins";
+
+// Importing Header
+@import "./pages/header";
+
+// Importing Intro
+@import "./pages/intro";
+.intro {
+  background-image: url("../images/bg-curvy-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  @include breakP() {
+    background-image: url("../images/bg-curvy-mobile.svg");
+    background-position: center 38%;
+  }
+}
+
+// Importing About
+@import "./pages/about";
+
+// Importing How It Works
+@import "./pages/how_works";
+
+// Importing Testimonials
+@import "./pages/testimonials";
+
+// Importing Footer
+@import "./pages/footer";

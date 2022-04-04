@@ -1,0 +1,10 @@
+.ready {
+  padding-bottom: 9.375rem;
+  @include center();
+  flex-direction: column;
+  > h1.__title {
+    @include breakP() {
+      text-align: center;
+    }
+  }
+}

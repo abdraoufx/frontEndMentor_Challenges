@@ -1,0 +1,36 @@
+.convers {
+  font-family: $f-opSans;
+  padding-bottom: 9.375rem;
+  .container {
+    @include spBeet();
+    @include breakP() {
+      flex-direction: column;
+      align-items: center;
+    }
+    .image-wrap {
+      @include breakP() {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5.3125rem;
+      }
+      > img {
+        max-width: 80%;
+      }
+    }
+    .__text {
+      @include breakP() {
+        text-align: center;
+      }
+      .__info {
+        color: $cyan;
+        font-size: 1rem;
+        width: 515px;
+        @include breakP() {
+          width: 365px;
+          line-height: 1.6;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}

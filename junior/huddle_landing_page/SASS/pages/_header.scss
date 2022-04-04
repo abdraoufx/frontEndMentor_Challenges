@@ -1,0 +1,27 @@
+header {
+  padding-bottom: 5.625rem;
+  .container {
+    @include spBeet();
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+    .logo {
+      max-width: 100%;
+      width: 160px;
+    }
+    button.try {
+      font-family: inherit;
+      text-transform: capitalize;
+      background-color: transparent;
+      color: $pink;
+      border: 1px solid currentColor;
+      cursor: pointer;
+      padding: 0.4375rem 1.4375rem;
+      border-radius: 1.875rem;
+      transition: $trDu;
+      &:hover {
+        color: $lPink;
+        border-color: currentColor;
+      }
+    }
+  }
+}

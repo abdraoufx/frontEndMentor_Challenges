@@ -1,0 +1,68 @@
+.intro {
+  text-align: center;
+  .container {
+    @include center();
+    flex-flow: column wrap;
+    .__title {
+      font-size: 2.625rem;
+      @include breakP() {
+        font-size: 1.875rem;
+        width: 340px;
+      }
+    }
+    .__info {
+      width: 485px;
+      font-size: 1rem;
+      margin-bottom: 2.8125rem;
+      color: $cyan;
+      @include breakP() {
+        width: 370px;
+        font-size: 1.0625rem;
+      }
+    }
+    .__start {
+      margin-bottom: 3.75rem;
+    }
+    .img-wrap {
+      margin-bottom: 3.75rem;
+      > img {
+        max-width: 100%;
+        width: 860px;
+      }
+    }
+    .__stats {
+      padding-bottom: 6.875rem;
+      @include spBeet();
+      width: 60%;
+      @include breakP() {
+        flex-flow: column wrap;
+        gap: 6.25rem;
+      }
+      .stat {
+        .__num {
+          font-family: $f-Poppins;
+          color: $cyan;
+          font-weight: bold;
+          font-size: 3.4375rem;
+          position: relative;
+        }
+        .__num::before {
+          position: absolute;
+          left: 0;
+          top: -1em;
+          width: 15px;
+        }
+        .__num.one::before {
+          content: url("../images/icon-communities.svg");
+        }
+        .__num.two::before {
+          content: url("../images/icon-messages.svg");
+        }
+        .__txt {
+          opacity: 0.5;
+          font-size: 1.0625rem;
+        }
+      }
+    }
+  }
+}

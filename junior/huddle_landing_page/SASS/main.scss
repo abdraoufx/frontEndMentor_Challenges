@@ -1,0 +1,32 @@
+// Importing Vars
+@import "./variables/variables";
+
+// Importing Global Rules
+@import "./layout/global-rules";
+
+// Importing Mixins
+@import "./helpers/mixins";
+
+// Importing Componnents
+@import "./layout/componnents";
+
+// Importing Header Section
+@import "./pages/header";
+
+// Importing Intro Section
+@import "./pages/intro";
+
+// Importing Illustration Section
+@import "./pages/illus";
+
+// Importing Conversation Section
+@import "./pages/convers";
+
+// Importing Users Section
+@import "./pages/users";
+
+// Importing Ready Section
+@import "./pages/ready";
+
+// Importing Footer
+@import "./pages/footer";

@@ -1,0 +1,51 @@
+.users {
+  padding-bottom: 9.375rem;
+  overflow: hidden;
+  @include breakP() {
+    text-align: center;
+  }
+  .mob-top-pic {
+    display: none;
+    @include breakP() {
+      display: block;
+      width: 100%;
+      position: relative;
+      bottom: -5px;
+      z-index: 10;
+    }
+  }
+  .container {
+    background-color: $blue;
+    @include spBeet();
+    position: relative;
+    z-index: 100;
+    @include breakP() {
+      flex-direction: column-reverse;
+    }
+    .__text {
+      .__info {
+        width: 460px;
+        @include breakP() {
+          width: 310px;
+        }
+      }
+    }
+    .image-wrapper {
+      @include center();
+      > img {
+        max-width: 80%;
+        @include breakP() {
+          margin-bottom: 3.4375rem;
+        }
+      }
+    }
+  }
+  .mob-bot-pic {
+    display: none;
+    @include breakP() {
+      display: block;
+      width: 100%;
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.illus {
+  padding-bottom: 9.375rem;
+  position: relative;
+  overflow: hidden;
+  .mob-top-pic {
+    display: none;
+    @include breakP() {
+      display: block;
+      position: relative;
+      bottom: -5px;
+      width: 100%;
+      z-index: 10;
+    }
+  }
+  .container {
+    @include spBeet();
+    background-color: $blue;
+    position: relative;
+    z-index: 100;
+    @include Break(950px) {
+      flex-flow: column-reverse;
+    }
+    .__text {
+      @include Break(950px) {
+        text-align: center;
+      }
+      .__para {
+        width: 450px;
+        @include Break(950px) {
+          width: 320px;
+        }
+      }
+    }
+    .image-wrap {
+      flex-basis: 45%;
+      @include Break(950px) {
+        @include center();
+        margin-bottom: 4.375rem;
+      }
+      > img {
+        max-width: 100%;
+        @include Break(950px) {
+          max-width: 70%;
+        }
+      }
+    }
+  }
+  .mob-bot-pic {
+    display: none;
+    @include breakP() {
+      display: block;
+      position: relative;
+      top: -5px;
+      transform: rotate(180deg);
+      width: 100%;
+      z-index: 10;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator App</title>
+    <link rel="stylesheet" href="SASS/main.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/logo.svg" alt="logo" class="logo" />
+      <div class="main-box">
+        <div class="inputs">
+          <div class="bill">
+            <div class="tit">
+              <h4 class="__title">Bill</h4>
+              <span class="error">Can't be zero</span>
+            </div>
+            <input type="text" class="bill-txt" id="bill" placeholder="0" />
+          </div>
+          <div class="tip">
+            <h4 class="__title">Select Tip %</h4>
+            <div class="boxes">
+              <div class="perc-box" data-value="5">5%</div>
+              <div class="perc-box" data-value="10">10%</div>
+              <div class="perc-box active" data-value="15">15%</div>
+              <div class="perc-box" data-value="25">25%</div>
+              <div class="perc-box" data-value="50">50%</div>
+              <input
+                type="text"
+                class="custom"
+                id="custom-perc"
+                placeholder="Custom"
+                maxlength="6"
+              />
+            </div>
+          </div>
+          <div class="p-num">
+            <div class="tit">
+              <h4 class="__title">Number of People</h4>
+              <span class="error">Can't be zero</span>
+            </div>
+            <input
+              type="text"
+              class="number-txt"
+              id="n-people"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="outputs">
+          <div class="data">
+            <div class="t-amout">
+              <div class="text">
+                <h5>Tip Amount</h5>
+                <span>/ person</span>
+              </div>
+              <span class="num" id="tip-am">0.00</span>
+            </div>
+            <div class="total">
+              <div class="text">
+                <h5>Total</h5>
+                <span>/ person</span>
+              </div>
+              <span class="num" id="total-am">0.00</span>
+            </div>
+          </div>
+          <button class="__reset no-data" id="reset-Btn">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script defer src="JS/main.js"></script>
+  </body>
+</html>

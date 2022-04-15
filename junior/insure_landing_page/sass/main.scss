@@ -1,0 +1,109 @@
+// Importing Vars
+@import './variables/variables';
+
+// Importing Mixins
+@import './helpers/mixins';
+
+// Impoting Global Rules
+@import  './layout/global-rules';
+
+// Importing Componnents
+@import "./layout/components";
+
+// Importing Header Page
+@import "./pages/header";
+
+header {
+    position: relative;
+    .bg-image {
+        position: absolute;
+        z-index: 40;
+
+        background-image: url('../images/bg-pattern-intro-left-desktop.svg');
+        background-size: cover;
+
+        width: 195px;
+        height: 504px;
+
+        left: 0;
+        bottom: -56.25rem;
+
+        @include for-phone-only() {
+            background-image: url('../images/bg-pattern-intro-left-mobile.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            width: 195px;
+            height: 50vw;
+
+            bottom: -46.1rem;
+
+        }
+    }
+    .primary-nav {
+        @include for-phone-only() {
+            background-image: url('../images/bg-pattern-mobile-nav.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position-y: bottom;
+        }
+    }
+}
+
+// Importing Intro Page
+@import "./pages/intro";
+
+.intro {
+    .bg-image {
+        position: absolute;
+        z-index: 40;
+        right: 0;
+        top: 0;
+
+        background-image: url('../images/bg-pattern-intro-right-desktop.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        width: 370px;
+        height: 500px;
+
+        @include for-phone-only() {
+            background-image: url('../images/bg-pattern-intro-right-mobile.svg');
+            background-size: cover;
+
+            width: 165px;
+            height: 445px;
+            
+            top: 61em;
+        }
+    }
+}
+
+// Importing About Page
+@import "./pages/about";
+
+.about {
+    .how-we-work {
+        background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+
+        @include for-phone-only {
+            background-image: url('../images/bg-pattern-how-we-work-mobile.svg');
+        }
+    }
+}
+
+// Importing Footer
+@import "./pages/footer";
+
+footer {
+    background-image: url('../images/bg-pattern-footer-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    
+    @include for-phone-only {
+        background-image: url('../images/bg-pattern-footer-mobile.svg');
+    }
+}

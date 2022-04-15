@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: $bodyFont;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headingFont;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1130px;
+}

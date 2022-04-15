@@ -1,0 +1,15 @@
+.special_btn {
+    border: 2px solid currentColor;
+    
+    padding: 0.7rem 1.1rem;;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8125rem;
+    
+    letter-spacing: 1px;
+
+    transition: $trDu;
+}

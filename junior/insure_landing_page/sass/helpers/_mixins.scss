@@ -1,0 +1,20 @@
+@mixin center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin spBeet() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin for-phone-only() {
+    @media (max-width: 702px) { 
+        @content; 
+    }
+}
+@mixin for-medium() {
+  @media (min-width: 703px ) and (max-width: 1035px) { 
+      @content;
+  }
+}

@@ -1,0 +1,111 @@
+.intro {
+    position: relative;
+
+    background-color: $darkV;
+    
+    padding: 6.25rem 0;
+
+    @include for-phone-only {
+        padding-top: 0;
+    }
+    .container {
+        @include spBeet;
+        @include for-phone-only {
+            padding: 0;
+            flex-direction: column-reverse;
+        }
+        .text {
+            position: relative;
+
+            flex-basis: 50%;
+            
+            padding-top: 3.75em;
+
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 1.5625rem;
+            
+            color: $lightG;
+
+            @include for-phone-only {
+                align-items: center;
+
+                padding: 6.25rem 1.25rem {
+                    bottom: 0;
+                }
+
+                text-align: center;
+            }
+            
+            &::before {
+                content: '';
+                
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                height: 1px;
+                width: 30%;
+
+                background-color: $lightG;
+
+                @include for-phone-only {
+                    display: none;
+                }
+            }
+            .__title {
+                font-size: 4.375rem;
+                font-weight: normal;
+                
+                line-height: 1;
+
+                @include for-medium {
+                    font-size: 6vw;
+                }
+                @include for-phone-only {
+                    font-size: 3.25rem;
+                }
+            }
+            .__text {
+                font-size: 1.0625rem;
+                line-height: 1.5;
+
+                @include for-medium {
+                    font-size: 0.875rem;
+                }
+                @include for-phone-only {
+                    font-size: 1.09375rem;
+                }
+            }
+            .special_btn {
+                color: $lightG;
+                &:hover {
+                    background-color: $lightG;
+                    color: $darkV;
+                }
+            }
+        }
+        .image-wrapper {
+            flex-basis: 48%;
+
+            position: relative;
+
+            height: 364.69px;
+            @include for-phone-only {
+                position: static;
+            }
+            > img {
+                max-width: 100%;
+
+                position: absolute;
+                inset: 0 0 0 0;
+
+                z-index: 1000;
+                @include for-phone-only {
+                    position: relative;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+header {
+    padding: 1.5em 0;
+    .container {
+        @include spBeet();
+
+        .logo {
+            max-width: 100%;
+        }
+        .primary-nav {
+            @include spBeet();
+            gap: 2rem;
+            @include for-phone-only() {
+                flex-direction: column;
+                justify-content: flex-start;
+
+                position: fixed;
+                inset: 80px 0 0 0 ;
+
+                width: 100%;
+                height: 100%;
+
+                padding: 3.5rem 1.8rem 0;
+
+                background-color: $vr-DarkV;
+                
+                z-index: 9999;
+
+                transition: $trDu;
+
+                &[hidden] {
+                    transform: translateX(-100%);
+                }
+                &[show] {
+                    transform: translateX(0%);
+                }
+            }
+            > li {
+                text-transform: uppercase;
+                font-size: 0.8125rem;
+                @include for-phone-only() {
+                    font-size: 1rem;
+                }
+                &.plans {
+                    @include for-phone-only() {
+                        width: 100%;
+                    }
+                }
+                > a {
+                    color: $dark-GV;
+
+                    font-weight: bold;
+
+                    letter-spacing: 1px;
+
+                    transition: all $trDu;
+                    @include for-phone-only() {
+                        color: $lightG;
+                        &:hover {
+                            color: $lightG !important;
+                        }
+                    }
+                    &:hover:not(.special_btn) {
+                        color: $darkV;
+                    }
+                    &.special_btn {
+                        color: $darkV;
+
+                        display: block;
+                        @include for-phone-only() {
+                            text-align: center;
+
+                            border-color: $lightG;
+                            color: $lightG;
+                            &:hover {
+                                color: $lightG;
+                                background-color: transparent !important;
+                            }
+                        }
+                        &:hover {
+                            color: $lightG;
+                            background-color: $darkV;
+                        }
+                    }
+                }
+            }
+        }
+        .hamburger-icon {
+            display: none;
+            @include for-phone-only() {
+                display: block;
+            }
+        }
+        .close-hamburger {
+            display: none;
+        }
+    }
+}

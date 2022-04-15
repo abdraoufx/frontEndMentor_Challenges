@@ -2,7 +2,7 @@
 
 ### - Live Website [LINK](https://abdraoufx.github.io/frontEndMentor_Challenges/junior/insure_landing_page)
 
-### - Challenge [LINK](https://www.frontendmentor.io/solutions/)
+### - Challenge [LINK](https://www.frontendmentor.io/solutions/full-responsive-insure-landing-page-with-sass-and-vanilla-js-SyrVhUwE9)
 
 ## Design Image
 

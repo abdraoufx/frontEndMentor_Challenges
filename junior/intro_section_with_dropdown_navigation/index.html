@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro Section With Dropdown Navigation</title>
+    <link rel="stylesheet" href="sass/main.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Start Header -->
+      <header>
+        <div class="left-side">
+          <img src="images/logo.svg" alt="Logo" class="logo" />
+          <ul class="nav-bar" hidden>
+            <li class="has-menu">
+              Features
+              <div class="img-wrapper">
+                <img
+                  src="images/icon-arrow-down.svg"
+                  class="arrows"
+                  alt="Arrow Icon"
+                  arrow-down
+                />
+              </div>
+              <ul class="nested-menu first" hidden>
+                <li>
+                  <a href="#">todo list</a>
+                  <img src="images/icon-todo.svg" alt="Icon 1" />
+                </li>
+                <li>
+                  <a href="#">calendar</a>
+                  <img src="images/icon-calendar.svg" alt="Icon 2" />
+                </li>
+                <li>
+                  <a href="#">reminders</a>
+                  <img src="images/icon-reminders.svg" alt="Icon 3" />
+                </li>
+                <li>
+                  <a href="#">planning</a>
+                  <img src="images/icon-planning.svg" alt="Icon 4" />
+                </li>
+              </ul>
+            </li>
+            <li class="has-menu">
+              Company
+              <div class="img-wrapper">
+                <img
+                  src="images/icon-arrow-down.svg"
+                  class="arrows"
+                  alt="Arrow Icon"
+                  arrow-down
+                />
+              </div>
+              <ul class="nested-menu second" hidden>
+                <li><a href="#">history</a></li>
+                <li><a href="#">our team</a></li>
+                <li><a href="#">blog</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+        <div class="right-side">
+          <a href="#" class="login">Login</a>
+          <a href="#" class="register">
+            <button>Register</button>
+          </a>
+        </div>
+        <img
+          src="images/icon-menu.svg"
+          alt="Hamburger Icon"
+          class="hamburger-icon"
+          id="hamb"
+        />
+        <img
+          src="images/icon-close-menu.svg"
+          alt="Close Hamburger"
+          class="close-hamb"
+          id="close-hamb"
+        />
+      </header>
+      <!-- End Header -->
+      <!-- Start Main Section -->
+      <section class="main">
+        <div class="text">
+          <h1 class="title">Make remote work</h1>
+          <p class="__text">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="learn">Learn more</button>
+          <div class="small-images">
+            <img src="images/client-databiz.svg" alt="Image Num 1" />
+            <img src="images/client-audiophile.svg" alt="Image Num 2" />
+            <img src="images/client-meet.svg" alt="Image Num 3" />
+            <img src="images/client-maker.svg" alt="Image Num 4" />
+          </div>
+        </div>
+        <div class="picture">
+          <img src="images/image-hero-desktop.png" class="desktop" />
+          <img src="images/image-hero-mobile.png" alt="" class="phone" />
+        </div>
+      </section>
+      <!-- End Main Section -->
+    </div>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+// Importing Vars
+@import "../variables/variables";
+
+// Importing MIxins
+@import '../helpers/mixins';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: $font-Ubuntu;
+    overflow-x: hidden !important;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1170px;
+    
+    padding: 0 1.25em;
+    margin: 0 auto;
+
+    @include med-brk {
+        max-width: 875px;
+    }
+}

@@ -1,0 +1,93 @@
+footer {
+    background-color: $v-DkBlackBlue;
+
+    padding: translateSize(80, rem) 0;
+
+    border-top-right-radius: translateSize(80, rem);
+    .container {
+        @include spBeet();
+
+        align-items: flex-start;
+
+        @include phone-brk {
+            flex-flow: column wrap;
+            align-items: center;
+
+            gap: translateSize(50, em);
+        }
+        .logo {
+            > img {
+                max-width: fit-content;
+            }
+        }
+        .info {
+            @include spBeet;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            flex-basis: 70%;
+
+            @include phone-brk {
+                flex-flow: column wrap;
+                align-items: center;
+                gap: 2.25em;
+
+                text-align: center;
+            }
+
+            .title {
+                margin-bottom: translateSize(30, rem);
+
+                color: $white;
+
+                font-weight: 500;
+            }
+            ul {
+                @include flex-col;
+                gap: translateSize(18, rem);
+
+                > li {
+                    font-size: translateSize(14, rem);
+
+                    color: $grBlue;
+
+                    cursor: pointer;
+                    
+                    position: relative;
+
+                    width: fit-content;
+                    
+                    @include phone-brk {
+                        width: 100%;
+                    }
+                    &::before {
+                        content: '';
+                        
+                        position: absolute;
+                        left: 0;
+                        bottom: -2px;
+                        
+                        width: 0;
+                        height: 1px;
+
+                        transition: $trDu;
+
+                        background-color: $grBlue;
+                    }
+
+                    &:hover::before {
+                        width: 100%;
+
+                        @include phone-brk {
+                            width: 50%;
+
+                            bottom: -3px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

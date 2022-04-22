@@ -1,0 +1,24 @@
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin spBeet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+@mixin med-brk {
+    @media (min-width: 715px) and (max-width: 1115px) {
+        @content;
+    }
+}
+@mixin phone-brk {
+    @media (max-width: 714px) {
+        @content;
+    }
+}

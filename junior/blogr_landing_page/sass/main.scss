@@ -1,0 +1,61 @@
+// Importing Global Rules
+@import './layout/_global-rules.scss';
+
+// Importing Vars
+@import './variables/_variables.scss';
+
+// Importing Mixins
+@import './helpers/_mixins.scss';
+
+// Importing Functions
+@import "./helpers/functions";
+
+// Importing Animation
+@import "./layout/animation";
+
+// Importing Header
+@import './pages/_header.scss';
+
+header {
+    background-image: url('../images/bg-pattern-intro-desktop.svg'), linear-gradient($dekstop-gradiant-nav);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 210%, 100%;
+    background-position: 20% 50%, 0% 0%;
+
+    border-bottom-left-radius: translateSize(80, rem);
+
+    @include phone-brk {
+        background-image: url('../images/bg-pattern-intro-mobile.svg'), linear-gradient($mobile-gradiant-nav);
+        background-size: 340%, 100%;
+        background-position: 35% 35%, 0% 0%;
+    }
+}
+
+// Importing Illustriation Laptop Section
+@import './pages/illus-laptop';
+
+// Importing Illustriation Mobile Section
+@import "./pages/illus-mobile";
+
+.illu-mobile {
+    background-image: url('../images/bg-pattern-circles.svg'), linear-gradient($gradiant-body);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 70%, 100%;
+    background-position: -48% 80%, 0% 0%;
+    
+    border-bottom-left-radius: translateSize(80, rem);
+    border-top-right-radius: translateSize(80, rem);
+
+    @include phone-brk {
+        background-size: 160%, 100%;
+        background-position: center 160%, 0% 0%;
+
+        text-align: center;
+    }
+}
+
+// Importing Last Illustration Section
+@import "./pages/illu-last";
+
+// Importing Footer
+@import "./pages/footer";

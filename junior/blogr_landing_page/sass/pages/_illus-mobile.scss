@@ -1,0 +1,75 @@
+.illu-mobile {
+    background-color: $vlGray;
+
+    padding: 5.4em 0;
+    
+    margin-top: translateSize(155, rem);
+    margin-bottom: 8rem;
+
+    position: relative;
+
+    z-index: 99999;
+
+    font-family: $font-Overpass;
+
+    .container {
+        @include spBeet;
+
+        color: $white;
+
+        @include phone-brk {
+            flex-flow: column;
+        }
+
+        .img-cont {
+            flex-basis: 47%;
+
+            > img {
+                width: 32%;
+
+                position: absolute;
+                bottom: translateSize(-80, rem);
+
+                @include med-brk {
+                    width: 42%;
+
+                    bottom: -2.4rem;
+                }
+                @include phone-brk {
+                    position: relative;
+                    bottom: translateSize(250, rem);
+
+                    width: 100%;
+                } 
+            }
+        }
+        .txt {
+            flex-basis: 49%;
+
+            @include phone-brk {
+                margin-top: translateSize(-270, rem);
+            }
+            .title {
+                margin-bottom: translateSize(8, em);
+
+                font-size: translateSize(33, rem);
+                
+                @include med-brk {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .text {
+                line-height: 1.6;
+
+                max-width: translateSize(450, rem);
+
+                font-size: translateSize(14, rem);
+
+                @include med-brk {
+                    font-size: translateSize(13.5, em);
+                }
+            }
+        }
+    }
+}

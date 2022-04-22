@@ -1,0 +1,99 @@
+.last-illu {
+    background-color: $vlGray;
+
+    padding-top: 1.875rem;
+    padding-bottom: 16.5rem;
+
+    position: relative;
+    
+    z-index: 1000;
+
+    @include phone-brk {
+        padding-bottom: 5.5rem;
+    }
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        left: 0;
+        top: -13.4375em;
+        
+        height: 85%;
+        width: 100%;
+
+        z-index: 10;
+
+        background-color: inherit;
+    }
+
+    .container {
+        @include spBeet;
+
+        position: relative;
+        z-index: 100;
+
+        @include phone-brk {
+            flex-flow: column;
+        }
+
+        .img-cont {
+            > .desktop {
+                position: absolute;
+                top: -6rem;
+                left: -21rem;
+
+                max-width: 75%;
+
+                @include med-brk {
+                    left: -15rem;
+                }
+                @include phone-brk {
+                    display: none;
+                }
+            }
+            > .mobile {
+                display: none;
+
+                @include phone-brk {
+                    display: block;
+                }
+            }
+        }
+        .text {
+            flex-basis: 46%;
+
+            @include flex-col;
+            gap: translateSize(55, rem);
+
+            margin-top: translateSize(100, rem);
+
+            @include phone-brk {
+                margin-top: 3.25rem;
+
+                text-align: center;
+            }
+            div {
+                > .title {
+                    font-family: $font-Overpass;
+                    font-size: translateSize(26, rem);
+
+                    color: $v-DkBlue;
+
+                    margin-bottom: translateSize(14, rem);
+                }
+                > .__text {
+                    max-width: translateSize(480, rem);
+
+                    font-size: translateSize(15, rem);
+
+                    line-height: 1.5;
+
+                    color: $v-DkGrBlue;
+
+                    opacity: .9;
+                }
+            }
+        }
+    }
+}

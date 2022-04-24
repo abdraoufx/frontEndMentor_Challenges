@@ -2,7 +2,7 @@
 
 ### - Live Website [LINK](https://abdraoufx.github.io/frontEndMentor_Challenges/junior/testimonials_grid_section)
 
-### - Challenge [LINK](https://www.frontendmentor.io/solutions/)
+### - Challenge [LINK](https://www.frontendmentor.io/solutions/mobile-1st-testimonials-grid-section-with-sass-HymlDSMBq)
 
 ## Design Image
 

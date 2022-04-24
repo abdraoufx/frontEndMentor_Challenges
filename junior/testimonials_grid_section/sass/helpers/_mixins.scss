@@ -1,0 +1,20 @@
+@mixin spBeet {
+    display: flex;
+
+    justify-content: space-between;
+}
+@mixin dir-col {
+    display: flex;
+
+    flex-direction: column;
+}
+@mixin med-brk {
+    @media (min-width: 900px) and (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin des-brk {
+    @media (min-width: 1201px) {
+        @content;
+    }
+}

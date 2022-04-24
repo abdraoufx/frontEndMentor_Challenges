@@ -1,3 +1,0 @@
-@function calcSize($size, $unit) {
-    @return calc($size / 16) + $unit;
-}

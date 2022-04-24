@@ -6,4 +6,4 @@
 
 ## Design Image
 
-![Preview_Design_Image](images/desktop-preview.jpg"Design Image")
+![Preview_Design_Image](https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/uctyehbyqpp90valvmwn.jpg "Design Image")

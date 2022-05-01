@@ -1,0 +1,3 @@
+@function tVal($val, $unit) {
+  @return calc($val / 16) + $unit;
+}

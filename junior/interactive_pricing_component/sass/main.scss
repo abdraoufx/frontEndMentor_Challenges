@@ -1,0 +1,643 @@
+// Import Vars
+@import "./variables/variables";
+
+// Import Functions
+@import "./helpers/funcs";
+
+// Importing Mixins
+@import "./helpers/mixins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  padding: 0 tVal(25, rem);
+  margin-inline: auto;
+}
+
+main {
+  height: 100%;
+
+  background-color: $veryP-Blue;
+  background-image: url("../images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  position: relative;
+
+  &::before {
+    content: "";
+
+    width: 0%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    z-index: 120;
+
+    background-color: rgba($dark-Des-Blue, 0.5);
+
+    transition: $trDu ease;
+  }
+
+  &.overlay::before {
+    width: 100%;
+  }
+
+  @include med-brk {
+    background-size: contain;
+  }
+  @include des-brk {
+    background-size: contain;
+  }
+}
+
+.first {
+  padding-bottom: tVal(50, em);
+
+  .container {
+    .intro {
+      width: fit-content;
+
+      margin: 0 auto;
+      padding-top: 6rem;
+
+      position: relative;
+
+      .bg-circles {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -25%);
+        z-index: 10;
+      }
+
+      .title,
+      .text {
+        position: relative;
+        z-index: 15;
+      }
+
+      .title {
+        color: $dark-Des-Blue;
+
+        font-size: tVal(21, rem);
+        margin-bottom: tVal(10, rem);
+
+        @include des-brk {
+          font-size: tVal(28, rem);
+        }
+      }
+
+      .text {
+        color: $grshBlue;
+
+        font-size: tVal(14, rem);
+        width: 70%;
+
+        margin: 0 auto;
+
+        line-height: 1.8;
+
+        @include des-brk {
+          width: 100%;
+
+          font-size: tVal(15, rem);
+        }
+      }
+    }
+  }
+}
+
+.second {
+  padding-bottom: tVal(50, rem);
+  $box-lfRg-padding: tVal(25, rem);
+
+  .container {
+    @include center;
+
+    .main-box {
+      background-color: $white;
+
+      border-radius: tVal(10, rem);
+
+      width: 100%;
+
+      box-shadow: rgb(50 50 93 / 0%) 0px 50px 100px -20px,
+        rgb(0 0 0 / 22%) 0px 30px 60px -30px;
+
+      @include med-brk {
+        width: 60%;
+      }
+      @include des-brk {
+        width: 40%;
+      }
+
+      .top-section,
+      .bottom-section {
+        padding: $box-lfRg-padding;
+      }
+
+      .top-section {
+        @include dir-col;
+        flex-wrap: wrap;
+        gap: tVal(20, rem);
+
+        .head {
+          flex-wrap: wrap;
+          @include med-brk {
+            @include spBeet;
+            align-items: center;
+            padding-top: tVal(20, rem);
+          }
+          @include des-brk {
+            @include spBeet;
+            align-items: center;
+            padding-top: tVal(20, rem);
+          }
+          .views {
+            color: $grshBlue;
+
+            font-size: tVal(12, rem);
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            padding-bottom: tVal(15, rem);
+
+            @include med-brk {
+              font-size: tVal(15, rem);
+            }
+            @include des-brk {
+              font-size: tVal(15, rem);
+            }
+
+            > .number {
+              margin-right: tVal(2, rem);
+            }
+          }
+          .price {
+            display: none;
+            color: $dark-Des-Blue;
+
+            font-size: 2.5rem;
+            font-weight: bold;
+
+            @include med-brk {
+              @include center;
+            }
+            @include des-brk {
+              @include center;
+            }
+
+            > span {
+              color: $grshBlue;
+
+              font-weight: normal;
+              font-size: 0.9rem;
+
+              margin-left: tVal(8, rem);
+            }
+          }
+        }
+
+        .price {
+          order: 2;
+
+          color: $dark-Des-Blue;
+
+          font-size: tVal(30, rem);
+          font-weight: bold;
+
+          @include center;
+
+          @include med-brk {
+            display: none;
+          }
+          @include des-brk {
+            display: none;
+          }
+
+          > span {
+            color: $grshBlue;
+
+            font-weight: normal;
+            font-size: 0.9rem;
+
+            margin-left: tVal(8, rem);
+          }
+        }
+
+        .slider {
+          appearance: none;
+
+          background-color: $lg-Grsh-Blue1;
+
+          border-radius: tVal(20, rem);
+
+          background-image: linear-gradient($sfCyan, $sfCyan);
+          background-size: 0%;
+          background-repeat: no-repeat;
+
+          height: 8px;
+
+          &::-webkit-slider-thumb {
+            appearance: none;
+
+            background-color: $stCyan;
+
+            height: 35px;
+            width: 35px;
+
+            cursor: pointer;
+
+            border-radius: 50%;
+
+            margin-top: -5px;
+
+            background-image: url("../images/icon-slider.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+
+            box-shadow: 0px 13px 20px 0px $sfCyan;
+
+            transition: $trDu;
+
+            &:hover {
+              background-color: $sfCyan;
+            }
+          }
+          &::-moz-range-thumb {
+            appearance: none;
+
+            background-color: $stCyan;
+
+            height: 35px;
+            width: 35px;
+
+            cursor: pointer;
+
+            border-radius: 50%;
+
+            margin-top: -5px;
+
+            background-image: url("../images/icon-slider.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+
+            box-shadow: 0px 10px 15px 0px $sfCyan;
+
+            transition: $trDu;
+
+            &:hover {
+              background-color: $sfCyan;
+            }
+          }
+          &::-ms-thumb {
+            appearance: none;
+
+            background-color: $stCyan;
+
+            height: 35px;
+            width: 35px;
+
+            cursor: pointer;
+
+            border-radius: 50%;
+
+            margin-top: -5px;
+
+            background-image: url("../images/icon-slider.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+
+            box-shadow: 0px 10px 15px 0px $sfCyan;
+
+            transition: $trDu;
+
+            &:hover {
+              background-color: $sfCyan;
+            }
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .billing {
+          order: 3;
+
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-wrap: wrap;
+
+          width: 100%;
+
+          position: relative;
+
+          @include med-brk {
+            padding-top: tVal(15, rem);
+
+            width: 85%;
+            margin-left: auto;
+          }
+
+          @include des-brk {
+            padding-top: tVal(15, rem);
+
+            width: 85%;
+            margin-left: auto;
+          }
+
+          > span {
+            color: $grshBlue;
+
+            font-size: tVal(13, rem);
+          }
+
+          .discount {
+            background-color: $lg-Grsh-Red;
+
+            color: $lg-Red;
+
+            font-size: tVal(10, rem);
+            padding: tVal(2, rem) tVal(6, rem);
+            border-radius: tVal(30, rem);
+
+            .txt {
+              display: none;
+
+              @include med-brk {
+                display: inline;
+              }
+              @include des-brk {
+                display: inline;
+              }
+            }
+          }
+        }
+
+        .toggler {
+          background-color: $lg-Grsh-Blue2;
+
+          width: 12%;
+
+          border-radius: 1.875rem;
+
+          cursor: pointer;
+
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          transition: $trDu;
+
+          &.checked {
+            justify-content: flex-end;
+
+            background-color: $stCyan;
+          }
+
+          &:hover {
+            background-color: $sfCyan;
+          }
+
+          > input[type="checkbox"] {
+            appearance: none;
+
+            border: none;
+            border-radius: 50%;
+
+            height: 16px;
+            width: 16px;
+
+            background-color: $white;
+          }
+        }
+      }
+
+      .bottom-section {
+        @include dir-col;
+        align-items: center;
+        gap: tVal(25, rem);
+        flex-wrap: wrap;
+
+        border-top: 1px solid rgba($lg-Grsh-Blue1, 1);
+
+        @include med-brk {
+          flex-direction: row;
+          justify-content: space-around;
+        }
+        @include des-brk {
+          flex-direction: row;
+          justify-content: space-around;
+        }
+
+        .benefits {
+          > div {
+            &:not(:last-of-type) {
+              margin-bottom: tVal(10, rem);
+            }
+
+            @include med-brk {
+              text-align: left;
+            }
+            @include des-brk {
+              text-align: left;
+            }
+
+            > span {
+              color: $grshBlue;
+
+              font-size: tVal(14, rem);
+
+              position: relative;
+
+              &::before {
+                content: url("../images/icon-check.svg");
+
+                position: absolute;
+                left: tVal(-20, rem);
+                top: 0;
+              }
+            }
+          }
+        }
+
+        .start-my-f {
+          border: none;
+
+          padding: tVal(12, rem) tVal(50, rem);
+          border-radius: tVal(35, rem);
+
+          background-color: $dark-Des-Blue;
+
+          color: $paleBlue;
+
+          @include med-brk {
+            cursor: pointer;
+
+            transition: $trDu;
+            &:hover {
+              color: $white;
+            }
+          }
+          @include des-brk {
+            cursor: pointer;
+
+            transition: $trDu;
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.succes-trial {
+  @include dir-col;
+  align-items: center;
+  gap: tVal(20, rem);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-300%, -50%);
+
+  background-color: $white;
+
+  padding: tVal(22, rem);
+
+  z-index: 1000;
+
+  border-radius: tVal(8, rem);
+
+  width: 353.19px;
+
+  transition: $trDu;
+  transition-delay: 500ms;
+
+  &.visible {
+    transform: translate(-50%, -50%);
+  }
+
+  img {
+    animation: rotateImg 2s ease-in 1s 1 alternate;
+  }
+
+  .txt {
+    color: $grshBlue;
+
+    text-transform: capitalize;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    width: 0;
+
+    animation: control-width 2s ease-in 1300ms both;
+  }
+
+  .got-it {
+    border: none;
+    border-radius: tVal(25, rem);
+
+    padding: tVal(10, rem) tVal(45, rem);
+
+    background-image: linear-gradient(to right, $stCyan, $dark-Des-Blue);
+    background-repeat: no-repeat;
+    background-size: 120%;
+
+    color: $paleBlue;
+
+    font-weight: bold;
+
+    animation: opacity-control 2s ease-in 2200ms both;
+
+    transition: $trDu;
+
+    &:hover {
+      color: $white;
+    }
+
+    @include med-brk {
+      cursor: pointer;
+    }
+    @include des-brk {
+      cursor: pointer;
+    }
+  }
+}
+
+@include animation(rotateImg) {
+  30% {
+    transform: rotate(335deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@include animation(control-width) {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@include animation(opacity-control) {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

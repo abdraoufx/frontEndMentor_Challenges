@@ -1,0 +1,32 @@
+// FlexBox Mixins
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin dir-col {
+  display: flex;
+  flex-direction: column;
+}
+@mixin spBeet {
+  display: flex;
+  justify-content: space-between;
+}
+// Media Queries Mixins
+@mixin des-brk {
+  @media (min-width: 1116px) {
+    @content;
+  }
+}
+@mixin med-brk {
+  @media (min-width: 765px) and (max-width: 1115px) {
+    @content;
+  }
+}
+
+// Animation KeyFrames
+@mixin animation($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}

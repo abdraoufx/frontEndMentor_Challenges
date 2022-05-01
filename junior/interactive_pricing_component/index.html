@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Pricing Component</title>
+    <link rel="stylesheet" href="sass/main.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="first">
+        <div class="container">
+          <div class="intro">
+            <img src="images/pattern-circles.svg" alt="" class="bg-circles" />
+            <h1 class="title text-center">Simple, traffic-based pricing</h1>
+            <p class="text text-center">
+              Sign-up for our 30-day trial. No credit card required.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="second">
+        <div class="container">
+          <div class="main-box">
+            <div class="top-section">
+              <div class="head text-center">
+                <span class="views">
+                  <span class="number">50K</span>
+                  Pageviews
+                </span>
+                <span class="price --desktop-only"
+                  >$8.00<span>/ month</span></span
+                >
+              </div>
+              <span class="price text-center">$8.00<span>/ month</span></span>
+              <input
+                type="range"
+                class="slider"
+                value="0"
+                min="1"
+                max="5"
+                step="1"
+              />
+              <div class="billing">
+                <span>Monthly Billing</span>
+                <div class="toggler">
+                  <input type="checkbox" />
+                </div>
+                <span>Yearly Billing</span>
+                <span class="discount"
+                  >-25% <span class="txt">discount</span>
+                </span>
+              </div>
+            </div>
+            <div class="bottom-section">
+              <div class="benefits text-center">
+                <div>
+                  <span>Unlimited websites</span>
+                </div>
+                <div>
+                  <span>100% data ownership</span>
+                </div>
+                <div>
+                  <span>Email reports</span>
+                </div>
+              </div>
+              <button class="start-my-f">Start my trial</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="succes-trial" id="trial-started">
+        <img src="images/icon-success.svg" alt="" />
+        <p class="txt">your trial has been started successfully.</p>
+        <button class="got-it" id="gotit">Got it !</button>
+      </div>
+    </main>
+    <script src="JS/main.js" defer></script>
+  </body>
+</html>

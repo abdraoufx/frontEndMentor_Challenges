@@ -2,7 +2,7 @@
 
 ### - Live Website [LINK](https://abdraoufx.github.io/frontEndMentor_Challenges/junior/interactive_pricing_component)
 
-### - Challenge [LINK](https://www.frontendmentor.io/solutions/)
+### - Challenge [LINK](https://www.frontendmentor.io/solutions/mobile-1st-interactive-pricing-component-with-sass-HJ5YoV2H9)
 
 ## Design Image
 

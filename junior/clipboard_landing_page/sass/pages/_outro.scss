@@ -1,0 +1,17 @@
+.outro {
+  margin-bottom: rem(150);
+  .container {
+    .title {
+      font-size: rem(40);
+    }
+    .text {
+      margin-bottom: rem(40);
+
+      @include des-brk {
+        max-width: rem(680);
+
+        margin: 0 auto 2.5rem;
+      }
+    }
+  }
+}

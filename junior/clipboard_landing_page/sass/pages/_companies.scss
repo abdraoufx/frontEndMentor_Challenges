@@ -1,0 +1,17 @@
+.companies {
+  margin-bottom: rem(100);
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: column wrap;
+
+    @include des-brk {
+      flex-flow: row wrap;
+    }
+
+    > img {
+      margin-bottom: rem(80);
+    }
+  }
+}

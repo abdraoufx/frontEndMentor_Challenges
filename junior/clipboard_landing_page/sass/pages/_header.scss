@@ -1,0 +1,32 @@
+header {
+  padding: 8.25rem 0;
+  .container {
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+
+      &__logo {
+        margin-block-end: rem(50);
+      }
+    }
+  }
+
+  .page-content {
+    padding: 0 rem(25);
+    margin-inline: auto;
+
+    &__title {
+      font-size: rem(40);
+    }
+
+    &__text {
+      margin-bottom: rem(40);
+
+      @include des-brk {
+        max-width: rem(610);
+
+        margin: 0 auto 2.5rem;
+      }
+    }
+  }
+}

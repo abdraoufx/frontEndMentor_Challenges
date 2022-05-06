@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  scrollbar-width: none;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif; // 400, 600
+
+  scrollbar-width: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+h2,
+h3 {
+  color: $dark-Grsh-Blue;
+
+  margin-bottom: 0.5em;
+}
+
+p {
+  color: $grBlue;
+
+  line-height: 1.7;
+
+  font-size: rem(18);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  padding: 0 rem(25);
+  margin-inline: auto;
+}
+
+.download {
+  @include dir-col;
+  gap: rem(20);
+
+  @include des-brk {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  &__btn {
+    border: none;
+
+    padding: rem(15) rem(10);
+
+    border-radius: rem(35);
+
+    color: $white;
+
+    font-weight: bold;
+    font-size: rem(18);
+
+    animation: up-and-down 2500ms alternate infinite;
+
+    @include des-brk {
+      padding: rem(18) rem(27);
+
+      cursor: pointer;
+
+      transition: $trDu;
+
+      &:hover {
+        opacity: 0.8;
+
+        animation: none;
+      }
+    }
+  }
+
+  &__ios {
+    background-color: $stCyan;
+
+    box-shadow: inset -1px -3px 0px 1px hsl(171deg 58% 40%),
+      -1px 6px 10px 0px rgba($stCyan, 0.8);
+  }
+
+  &__mac {
+    background-color: $lgBlue;
+
+    box-shadow: inset -1px -3px 0px 1px hsl(233deg 48% 53% / 39%),
+      -1px 6px 10px 0px rgba($lgBlue, 0.8);
+  }
+}

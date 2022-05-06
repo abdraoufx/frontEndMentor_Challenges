@@ -1,0 +1,74 @@
+.about {
+  margin-bottom: rem(150);
+
+  .header {
+    margin-bottom: rem(55);
+    &__title {
+      margin-bottom: rem(15);
+
+      font-size: rem(32);
+    }
+
+    &__text {
+      max-width: rem(340);
+
+      margin: 0 auto;
+
+      @include des-brk {
+        max-width: rem(700);
+      }
+    }
+  }
+
+  .main-content {
+    @include dir-col;
+    gap: rem(45);
+
+    padding: 0 1.5625rem;
+    margin-inline: auto;
+
+    @include des-brk {
+      padding-left: 0;
+
+      @include dir-row;
+    }
+
+    &__img-wrapper {
+      position: static;
+
+      @include des-brk {
+        position: relative;
+        right: rem(30);
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      gap: rem(30);
+
+      .__section {
+        h3 {
+          font-size: rem(25);
+        }
+
+        p {
+          font-size: rem(15);
+
+          max-width: rem(300);
+
+          margin-inline: auto;
+        }
+
+        @include des-brk {
+          h3,
+          p {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

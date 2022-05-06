@@ -1,0 +1,9 @@
+@include anM(up-and-down) {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(rem(15));
+  }
+}

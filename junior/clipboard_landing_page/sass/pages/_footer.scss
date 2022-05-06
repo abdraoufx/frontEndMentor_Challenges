@@ -1,0 +1,88 @@
+footer {
+  background-color: $light-Grsh-Blue;
+
+  padding: rem(30) 0;
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: rem(45);
+
+    @include des-brk {
+      flex-flow: row wrap;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: column wrap;
+      gap: rem(25);
+
+      @include des-brk {
+        width: 70%;
+
+        justify-content: space-between;
+        flex-flow: row wrap;
+      }
+
+      &__footer-logo {
+        width: rem(60);
+      }
+
+      ul {
+        @include dir-col;
+
+        text-align: center;
+
+        gap: rem(25);
+
+        @include des-brk {
+          text-align: left;
+
+          gap: rem(15);
+        }
+
+        li {
+          font-size: rem(16);
+
+          > a {
+            color: $dark-Grsh-Blue;
+
+            transition: $trDu;
+
+            &:hover {
+              color: $stCyan;
+            }
+          }
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: rem(35);
+
+      @include des-brk {
+        gap: rem(25);
+      }
+
+      > svg {
+        cursor: pointer;
+
+        color: $dark-Grsh-Blue;
+
+        font-size: rem(25);
+
+        transition: $trDu;
+
+        &:hover {
+          color: $stCyan;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.tools {
+  margin-bottom: rem(150);
+
+  .container {
+    .__title {
+      font-size: rem(35);
+    }
+    .__text {
+      margin-bottom: rem(100);
+    }
+
+    .main-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      gap: rem(60);
+
+      @include des-brk {
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 0;
+      }
+
+      &__tool {
+        @include dir-col;
+        align-items: center;
+        gap: rem(25);
+
+        @include des-brk {
+          width: calc(90% / 3);
+        }
+
+        .logo {
+          height: rem(35);
+        }
+
+        .title {
+          font-size: 1.5625rem;
+        }
+      }
+    }
+  }
+}

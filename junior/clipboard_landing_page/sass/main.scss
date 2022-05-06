@@ -1,0 +1,52 @@
+// Importing Global Variables
+@import "./variables/global-vars";
+
+// Importing Functions
+@import "./helpers/funcs";
+
+// Importing Mixins
+@import "./helpers/mixins";
+
+// Importing Animations
+@import "./layout/animations";
+
+// Importing Global Rules
+@import "./layout/global-rules";
+
+main {
+  height: 100%;
+}
+
+/* Importing Header */
+@import "./pages/header";
+
+header {
+  background-image: url(../images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include des-brk {
+    background-image: url(../images/bg-header-desktop.png);
+    background-size: contain;
+    background-position: top;
+  }
+}
+
+/* Importing About */
+@import "./pages/about";
+
+/* Importing Intro */
+@import "./pages/intro";
+
+/* Importing Tools */
+@import "./pages/tools";
+
+/* Importing Companies */
+@import "./pages/companies";
+
+/* Importing Outro */
+@import "./pages/outro";
+
+/* Importing Footer */
+@import "./pages/footer";

@@ -1,4 +1,4 @@
-# Fylog Landing Page With Two Column Layout Challenge.
+# Fylo Landing Page With Two Column Layout Challenge.
 
 ### - Live Website [LINK](https://abdraoufx.github.io/frontEndMentor_Challenges/junior/fylo_landing_page_with_two_column)
 

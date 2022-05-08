@@ -1,0 +1,131 @@
+.testim {
+  padding: rem(60) 0;
+
+  margin-bottom: rem(25);
+
+  .content {
+    display: flex;
+    @include dir-col;
+    gap: rem(25);
+
+    .title {
+      font-size: rem(26);
+    }
+
+    > .text {
+      color: $desBlue;
+
+      font-size: rem(20);
+    }
+
+    .how-it-works {
+      position: relative;
+
+      color: $modCyan;
+
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+
+      margin: 0 auto rem(30);
+
+      @include desk-brk {
+        margin-left: 0;
+      }
+
+      &:hover::before {
+        width: 0;
+      }
+
+      &::before {
+        content: "";
+
+        width: 100%;
+        height: rem(1.5);
+
+        background-color: $modCyan;
+
+        position: absolute;
+        bottom: rem(-5);
+        left: 0;
+
+        transition: $trDu ease-out;
+      }
+
+      > img {
+        width: rem(20);
+      }
+    }
+
+    .testim-box {
+      background-color: $white;
+
+      padding: rem(30);
+
+      border-radius: rem(5);
+
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+      display: flex;
+      @include dir-col;
+      align-items: flex-start;
+      gap: rem(20);
+
+      max-width: rem(440);
+
+      margin: 0 auto;
+
+      @include desk-brk {
+        margin: 0;
+      }
+
+      > .text {
+        color: $darkBlue;
+
+        font-family: $ff-OpSans;
+
+        max-width: 95%;
+
+        line-height: 1.6;
+      }
+
+      .info {
+        display: flex;
+        gap: rem(10);
+
+        > img {
+          clip-path: circle();
+
+          width: rem(40);
+        }
+
+        > .details {
+          display: flex;
+          @include dir-col;
+          gap: rem(8);
+
+          > span {
+            &.name {
+              color: $darkBlue;
+
+              font-weight: bold;
+
+              font-size: rem(16);
+
+              @include desk-brk;
+            }
+
+            &.job {
+              font-size: rem(11);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__img-wrapper {
+    margin-bottom: rem(90);
+  }
+}

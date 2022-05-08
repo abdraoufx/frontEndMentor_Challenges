@@ -1,0 +1,39 @@
+.header {
+  padding: rem(40) 0;
+
+  margin-bottom: rem(60);
+
+  @include desk-brk {
+    padding: rem(45) 0;
+  }
+  .container {
+    @include spBeet;
+    align-items: center;
+  }
+
+  &__nav {
+    > ul {
+      display: flex;
+      align-items: center;
+      gap: rem(25);
+
+      @include desk-brk {
+        gap: rem(50);
+      }
+
+      > li {
+        font-size: 1rem;
+
+        > a {
+          color: $darkBlue;
+
+          white-space: nowrap;
+
+          @include desk-brk {
+            font-size: rem(17);
+          }
+        }
+      }
+    }
+  }
+}

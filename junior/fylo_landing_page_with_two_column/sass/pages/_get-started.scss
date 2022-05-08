@@ -1,0 +1,48 @@
+.get-started {
+  margin-bottom: rem(80);
+
+  .left {
+    display: flex;
+    @include dir-col;
+    gap: rem(30);
+
+    @include desk-brk {
+      padding-top: rem(80);
+    }
+
+    .text {
+      max-width: rem(360);
+
+      margin: 0 auto;
+
+      color: $darkBlue;
+
+      font-size: rem(17);
+
+      @include desk-brk {
+        margin: 0;
+
+        max-width: none;
+      }
+    }
+  }
+
+  .form {
+    @include desk-brk {
+      flex-flow: row wrap;
+    }
+
+    &__input {
+      .email-input {
+        border: rem(1.5) solid $desBlue;
+      }
+    }
+  }
+
+  &__img-wrapper {
+    margin-bottom: rem(70);
+
+    display: flex;
+    align-items: center;
+  }
+}

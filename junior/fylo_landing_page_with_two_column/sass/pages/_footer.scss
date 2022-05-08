@@ -1,0 +1,99 @@
+footer {
+  padding: rem(80) 0;
+
+  background-color: $darkBlue;
+
+  font-family: $ff-OpSans;
+
+  .container {
+    display: flex;
+    @include dir-col;
+    align-items: flex-start;
+    gap: rem(25);
+
+    .logo {
+      filter: invert(100%) sepia(100%) saturate(80%) hue-rotate(180deg)
+        brightness(400%) contrast(100%);
+    }
+
+    .content {
+      display: flex;
+      @include dir-col;
+      gap: rem(35);
+
+      width: 100%;
+
+      @include desk-brk {
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        padding-right: rem(190);
+      }
+
+      ul {
+        > li {
+          color: $lg-Grsh-Blue;
+
+          &:not(:last-of-type) {
+            margin-bottom: rem(15);
+          }
+          &.has-img {
+            display: flex;
+            align-items: center;
+            gap: rem(16);
+          }
+
+          &:hover {
+            color: $brBlue;
+          }
+          > a {
+            color: inherit;
+
+            transition: $trDu;
+          }
+        }
+      }
+
+      .icons {
+        @include center;
+        gap: rem(15);
+
+        &__icon-wrapper {
+          color: $white;
+
+          @include center;
+
+          padding: rem(8);
+
+          border: rem(1) solid $lg-Grsh-Blue;
+          border-radius: 50%;
+
+          transition: $trDu;
+
+          &:hover {
+            border-color: rgba($brBlue, 0.6);
+
+            > i {
+              color: $brBlue;
+            }
+          }
+
+          > i {
+            font-size: rem(20);
+
+            transition: $trDu;
+
+            @include desk-brk {
+              font-size: rem(16);
+            }
+          }
+
+          @include desk-brk {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

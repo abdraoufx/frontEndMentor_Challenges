@@ -1,0 +1,40 @@
+/* Importing Vars */
+@import "./variables/variables";
+
+/* Importing Functions */
+@import "./helpers/funcs";
+
+/* Importing Importing Mixins */
+@import "./helpers/mixins";
+
+/* Importing Global Rules */
+@import "./layout/global-rules";
+
+/* Importing Utilities */
+@import "./layout/utilities";
+
+/* Importing Header */
+@import "./pages/header";
+
+/* Importing Get Started */
+@import "./pages/get-started";
+
+/* Importing Get Started */
+@import "./pages/testim";
+
+.testim {
+  background-image: url("../images/bg-curve-mobile.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include desk-brk {
+    background-image: url("../images/bg-curve-desktop.svg");
+  }
+}
+
+/* Importing Access */
+@import "./pages/access";
+
+/* Importing Footer */
+@import "./pages/footer";

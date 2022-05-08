@@ -1,0 +1,525 @@
+/* Importing Vars */
+/* Importing Functions */
+/* Importing Importing Mixins */
+/* Importing Global Rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Importing Utilities */
+.container {
+  padding: 0 1.25rem;
+  margin-inline: auto;
+}
+@media (min-width: 39.0625rem) {
+  .container {
+    padding: 0 2.5rem;
+  }
+}
+
+.text-center-left {
+  text-align: center;
+}
+@media (min-width: 39.0625rem) {
+  .text-center-left {
+    text-align: left;
+  }
+}
+
+.title {
+  color: hsl(243deg, 87%, 12%);
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 2.1875rem;
+  line-height: 1.3;
+}
+@media (min-width: 39.0625rem) {
+  .title {
+    line-height: 1.5;
+  }
+}
+
+.text {
+  line-height: 1.6;
+}
+@media (min-width: 39.0625rem) {
+  .text {
+    line-height: 1.4;
+  }
+}
+
+.split {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+}
+@media (min-width: 39.0625rem) {
+  .split {
+    flex-flow: row wrap;
+  }
+  .split > div {
+    width: 47.5%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+}
+.form .email-input,
+.form .g-start {
+  width: 100%;
+  border-radius: 0.1875rem;
+  padding: 1.25rem 1.5625rem;
+  font-size: 1.125rem;
+}
+@media (min-width: 39.0625rem) {
+  .form .email-input,
+.form .g-start {
+    padding: 0.8125rem 1.125rem;
+    font-size: 0.9375rem;
+  }
+}
+.form__input {
+  position: relative;
+}
+@media (min-width: 39.0625rem) {
+  .form__input {
+    flex: 1 0 55%;
+  }
+}
+.form__input .email-input {
+  caret-color: hsl(224deg, 93%, 58%);
+  color: hsl(243deg, 87%, 12%);
+}
+.form__input .email-input.error {
+  border: 0.0625rem solid hsl(339deg, 100%, 82%) !important;
+}
+.form__input .email-input.error + span {
+  display: block;
+}
+.form__input .email-input.valid {
+  border-color: rgba(60, 159, 143, 0.7);
+}
+.form__input .email-input.valid + span + span {
+  display: block;
+}
+.form__input .email-input::-moz-placeholder {
+  color: hsl(0deg, 0%, 75%);
+}
+.form__input .email-input:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 75%);
+}
+.form__input .email-input::placeholder {
+  color: hsl(0deg, 0%, 75%);
+}
+.form__input .email-input:focus {
+  outline: none;
+}
+.form__input span {
+  position: absolute;
+  bottom: -1.25rem;
+  left: 0;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  display: none;
+}
+.form__input span.msg-error {
+  color: hsl(339deg, 100%, 82%);
+}
+.form__input span.msg-valid {
+  color: rgba(60, 159, 143, 0.7);
+}
+.form .g-start {
+  background-color: hsl(224deg, 93%, 58%);
+  color: hsl(240deg, 80%, 98%);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form .g-start:hover {
+  opacity: 0.7;
+}
+@media (min-width: 39.0625rem) {
+  .form .g-start {
+    flex: 1 0 40%;
+  }
+}
+
+/* Importing Header */
+.header {
+  padding: 2.5rem 0;
+  margin-bottom: 3.75rem;
+}
+@media (min-width: 39.0625rem) {
+  .header {
+    padding: 2.8125rem 0;
+  }
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5625rem;
+}
+@media (min-width: 39.0625rem) {
+  .header__nav > ul {
+    gap: 3.125rem;
+  }
+}
+.header__nav > ul > li {
+  font-size: 1rem;
+}
+.header__nav > ul > li > a {
+  color: hsl(243deg, 87%, 12%);
+  white-space: nowrap;
+}
+@media (min-width: 39.0625rem) {
+  .header__nav > ul > li > a {
+    font-size: 1.0625rem;
+  }
+}
+
+/* Importing Get Started */
+.get-started {
+  margin-bottom: 5rem;
+}
+.get-started .left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+@media (min-width: 39.0625rem) {
+  .get-started .left {
+    padding-top: 5rem;
+  }
+}
+.get-started .left .text {
+  max-width: 22.5rem;
+  margin: 0 auto;
+  color: hsl(243deg, 87%, 12%);
+  font-size: 1.0625rem;
+}
+@media (min-width: 39.0625rem) {
+  .get-started .left .text {
+    margin: 0;
+    max-width: none;
+  }
+}
+@media (min-width: 39.0625rem) {
+  .get-started .form {
+    flex-flow: row wrap;
+  }
+}
+.get-started .form__input .email-input {
+  border: 0.09375rem solid hsl(238deg, 22%, 44%);
+}
+.get-started__img-wrapper {
+  margin-bottom: 4.375rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Importing Get Started */
+.testim {
+  padding: 3.75rem 0;
+  margin-bottom: 1.5625rem;
+}
+.testim .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+}
+.testim .content .title {
+  font-size: 1.625rem;
+}
+.testim .content > .text {
+  color: hsl(238deg, 22%, 44%);
+  font-size: 1.25rem;
+}
+.testim .content .how-it-works {
+  position: relative;
+  color: hsl(170deg, 45%, 43%);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 0 auto 1.875rem;
+}
+@media (min-width: 39.0625rem) {
+  .testim .content .how-it-works {
+    margin-left: 0;
+  }
+}
+.testim .content .how-it-works:hover::before {
+  width: 0;
+}
+.testim .content .how-it-works::before {
+  content: "";
+  width: 100%;
+  height: 0.09375rem;
+  background-color: hsl(170deg, 45%, 43%);
+  position: absolute;
+  bottom: -0.3125rem;
+  left: 0;
+  transition: 0.3s ease-out;
+}
+.testim .content .how-it-works > img {
+  width: 1.25rem;
+}
+.testim .content .testim-box {
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 1.875rem;
+  border-radius: 0.3125rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  max-width: 27.5rem;
+  margin: 0 auto;
+}
+@media (min-width: 39.0625rem) {
+  .testim .content .testim-box {
+    margin: 0;
+  }
+}
+.testim .content .testim-box > .text {
+  color: hsl(243deg, 87%, 12%);
+  font-family: "Open Sans", sans-serif;
+  max-width: 95%;
+  line-height: 1.6;
+}
+.testim .content .testim-box .info {
+  display: flex;
+  gap: 0.625rem;
+}
+.testim .content .testim-box .info > img {
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  width: 2.5rem;
+}
+.testim .content .testim-box .info > .details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.testim .content .testim-box .info > .details > span.name {
+  color: hsl(243deg, 87%, 12%);
+  font-weight: bold;
+  font-size: 1rem;
+}
+.testim .content .testim-box .info > .details > span.job {
+  font-size: 0.6875rem;
+}
+.testim__img-wrapper {
+  margin-bottom: 5.625rem;
+}
+
+.testim {
+  background-image: url("../images/bg-curve-mobile.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 39.0625rem) {
+  .testim {
+    background-image: url("../images/bg-curve-desktop.svg");
+  }
+}
+
+/* Importing Access */
+.access {
+  padding: 5rem 0;
+  background-color: hsl(238deg, 22%, 44%);
+}
+.access .split {
+  gap: 1.875rem;
+}
+.access .split .text {
+  max-width: 21.25rem;
+  margin: 0 auto;
+}
+@media (min-width: 39.0625rem) {
+  .access .split .text {
+    margin: 0;
+    max-width: 33.4375rem;
+  }
+}
+.access .split .text h2,
+.access .split .text p {
+  color: hsl(240deg, 80%, 98%);
+}
+.access .split .text h2 {
+  margin-bottom: 0.9375rem;
+  font-size: 1.75rem;
+}
+.access .split .text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.0625rem;
+}
+.access .split .form {
+  width: 85%;
+  margin: 0 auto;
+}
+@media (min-width: 39.0625rem) {
+  .access .split .form {
+    width: 47.5%;
+    margin: 0;
+    flex-flow: column nowrap;
+    gap: 0rem;
+  }
+}
+.access .split .form__input .email-input {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px -1px 0px -3px, rgba(27, 31, 35, 0.15) 2px 2px 0px 1px;
+  border: none;
+}
+.access .split .form__input .email-input.valid {
+  border-color: transparent !important;
+}
+.access .split .form__input .email-input.valid + span + span {
+  color: hsl(0deg, 0%, 100%) !important;
+}
+.access .split .form__input .email-input.error + span {
+  color: hsl(240deg, 80%, 98%);
+}
+.access .split .form__input span {
+  bottom: 0.5625rem;
+}
+.access .split .form .g-start {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px -1px 0px -3px, rgba(27, 31, 35, 0.15) 2px 2px 0px 1px;
+}
+@media (min-width: 39.0625rem) {
+  .access .split .form .g-start {
+    width: 30%;
+  }
+}
+
+/* Importing Footer */
+footer {
+  padding: 5rem 0;
+  background-color: hsl(243deg, 87%, 12%);
+  font-family: "Open Sans", sans-serif;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5625rem;
+}
+footer .container .logo {
+  filter: invert(100%) sepia(100%) saturate(80%) hue-rotate(180deg) brightness(400%) contrast(100%);
+}
+footer .container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.1875rem;
+  width: 100%;
+}
+@media (min-width: 39.0625rem) {
+  footer .container .content {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 11.875rem;
+  }
+}
+footer .container .content ul > li {
+  color: hsl(240deg, 80%, 98%);
+}
+footer .container .content ul > li:not(:last-of-type) {
+  margin-bottom: 0.9375rem;
+}
+footer .container .content ul > li.has-img {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+footer .container .content ul > li:hover {
+  color: hsl(224deg, 93%, 58%);
+}
+footer .container .content ul > li > a {
+  color: inherit;
+  transition: 0.3s;
+}
+footer .container .content .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9375rem;
+}
+footer .container .content .icons__icon-wrapper {
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: 0.0625rem solid hsl(240deg, 80%, 98%);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+footer .container .content .icons__icon-wrapper:hover {
+  border-color: rgba(48, 101, 248, 0.6);
+}
+footer .container .content .icons__icon-wrapper:hover > i {
+  color: hsl(224deg, 93%, 58%);
+}
+footer .container .content .icons__icon-wrapper > i {
+  font-size: 1.25rem;
+  transition: 0.3s;
+}
+@media (min-width: 39.0625rem) {
+  footer .container .content .icons__icon-wrapper > i {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 39.0625rem) {
+  footer .container .content .icons__icon-wrapper {
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=main.css.map */

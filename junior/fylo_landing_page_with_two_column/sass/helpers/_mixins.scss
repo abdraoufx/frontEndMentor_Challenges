@@ -1,0 +1,40 @@
+// FlexBox Mixins
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin spBeet {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin spAround {
+  display: flex;
+  justify-content: space-around;
+}
+@mixin dir-col {
+  flex-direction: column;
+}
+@mixin dir-row {
+  flex-flow: row wrap;
+}
+
+// Grid Mixins
+@mixin centerGr {
+  display: grid;
+  place-items: center;
+}
+
+// Media Queries Mixins
+@mixin desk-brk {
+  @media (min-width: rem(625)) {
+    @content;
+  }
+}
+
+// Animation Mixins
+@mixin anm($id) {
+  @keyframes #{$id} {
+    @content;
+  }
+}

@@ -1,0 +1,146 @@
+// Importing Vars
+@use "../variables/variables" as *;
+
+// Importing Functions
+@use "../helpers/funcs" as *;
+
+// Importing Mixins
+@use "../helpers/mixins" as *;
+
+// Importing Global Rules
+@use "../layout/global-rules" as *;
+
+.main-footer {
+  background-color: $d-Cyan;
+
+  padding: rem(150) rem(0) rem(70);
+
+  &__container {
+    .logo {
+      margin-bottom: rem(32);
+    }
+    .content {
+      @include dir-col;
+      align-items: flex-start;
+      gap: rem(30);
+
+      color: $white;
+
+      margin-bottom: rem(30);
+
+      @include med-brk {
+        flex-flow: row;
+        gap: 0;
+        justify-content: space-between;
+      }
+
+      .info {
+        @include dir-col;
+        gap: rem(25);
+
+        @include med-brk {
+          flex-basis: 30%;
+        }
+
+        > li {
+          display: flex;
+          align-items: flex-start;
+          gap: rem(25);
+        }
+      }
+
+      .navs {
+        @include dir-col;
+        gap: rem(15);
+        > li {
+          font-size: rem(17);
+
+          @include med-brk {
+            opacity: 0.9;
+
+            width: fit-content;
+
+            position: relative;
+
+            &:hover {
+              opacity: 1;
+            }
+
+            &:hover::before {
+              width: 100%;
+            }
+
+            &::before {
+              content: "";
+
+              width: 0;
+              height: rem(1);
+
+              background-color: $white;
+
+              position: absolute;
+              left: 0;
+              bottom: rem(-2);
+
+              transition: $trDu;
+            }
+          }
+
+          a {
+            color: $white;
+          }
+        }
+      }
+
+      .icons {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(20);
+
+        @include med-brk {
+          width: fit-content;
+        }
+
+        &__icon-wrapper {
+          @include center;
+
+          padding: 0.5rem;
+
+          border: rem(1) solid $white;
+          border-radius: 50%;
+
+          transition: $trDu ease-in;
+
+          > i {
+            font-size: rem(20);
+
+            transition: $trDu;
+          }
+
+          @include med-brk {
+            cursor: pointer;
+
+            &:hover {
+              color: $pink;
+
+              border-color: currentColor;
+            }
+          }
+        }
+      }
+    }
+
+    .copy {
+      display: block;
+
+      color: $white;
+
+      @include med-brk {
+        text-align: right !important;
+      }
+    }
+  }
+}

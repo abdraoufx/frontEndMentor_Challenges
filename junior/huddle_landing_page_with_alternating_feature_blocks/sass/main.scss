@@ -1,0 +1,31 @@
+// Importing Vars
+@use "./variables/variables" as *;
+
+// Importing Functions
+@use "./helpers/funcs" as *;
+
+// Importing Mixins
+@use "./helpers/mixins" as *;
+
+// Importing Global Rules
+@use "./layout/global-rules" as *;
+
+// Importing Header
+@use "./pages/main-header" as *;
+
+// Importing About
+@use "./pages/about" as *;
+
+// Importing Footer
+@use "./pages/footer" as *;
+
+.main-header {
+  background-image: url("../images/bg-hero-mobile.svg");
+  background-size: 99% 96%;
+  background-repeat: no-repeat;
+
+  @include med-brk {
+    background-image: url("../images/bg-hero-desktop.svg");
+    background-size: cover;
+  }
+}

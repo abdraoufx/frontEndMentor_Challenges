@@ -1,0 +1,137 @@
+// Importing Vars
+@use "../variables/variables" as *;
+
+// Importing Functions
+@use "../helpers/funcs" as *;
+
+// Importing Mixins
+@use "../helpers/mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+body {
+  font-family: $ff-opSans;
+
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  display: block;
+
+  font-family: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left-center {
+  text-align: center;
+
+  @include med-brk {
+    text-align: left;
+  }
+}
+
+.title {
+  margin: 0 auto;
+
+  color: $d-Cyan;
+
+  font-size: rem(31);
+
+  line-height: 1.5;
+
+  @include med-brk {
+    margin: {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.info {
+  margin: 0 auto;
+
+  @include med-brk {
+    margin: {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.get-started {
+  padding: rem(20) rem(40);
+
+  border-radius: 100vh;
+  border: none;
+
+  background-color: $pink;
+
+  color: $white;
+
+  font-weight: bold;
+  font-size: rem(14);
+
+  box-shadow: 0px 3px 10px 0px rgba($pink, 0.5);
+
+  transition: $trDu;
+
+  @include med-brk {
+    cursor: pointer;
+
+    padding: rem(20) rem(70);
+
+    font-size: rem(18);
+    font-weight: bold;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.container {
+  padding: 0 rem(25);
+
+  margin-inline: auto;
+
+  max-width: rem(1250);
+
+  @include med-brk {
+    padding: 0 rem(30);
+  }
+}

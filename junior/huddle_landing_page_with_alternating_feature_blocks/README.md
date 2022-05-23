@@ -2,7 +2,7 @@
 
 ### - Live Website [LINK](https://abdraoufx.github.io/frontEndMentor_Challenges/junior/huddle_landing_page_with_alternating_feature_blocks/)
 
-### - Challenge [LINK](https://www.frontendmentor.io/solutions/)
+### - Challenge [LINK](https://www.frontendmentor.io/solutions/mobile-1st-huddle-landing-page-with-sass-and-js-7ReEXbtF78)
 
 ## Design Image
 

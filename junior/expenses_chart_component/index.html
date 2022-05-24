@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expenses Chart Componnent</title>
+    <link rel="stylesheet" href="sass/main.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <div class="main__boxes">
+        <div class="main__boxes__balance-box">
+          <div class="text">
+            <h3>My balance</h3>
+            <span id="balance" class="balance-txt">0.00</span>
+          </div>
+          <img src="images/logo.svg" alt="Logo" />
+        </div>
+        <div class="main__boxes__chart-box">
+          <h1 class="title">
+            Spending - Last <span class="num-D">7</span> days
+          </h1>
+          <ul class="days">
+            <li>
+              <div class="chart">
+                <div class="chart__price">
+                  <span class="number"></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="chart">
+                <div class="chart__price">
+                  <span class="number"></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="chart wed">
+                <div class="chart__price">
+                  <span class="number"></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="chart">
+                <div class="chart__price">
+                  <span class="number"></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="chart">
+                <div class="chart__price">
+                  <span class="number"></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="chart">
+                <div class="chart__price">
+                  <span class="number"></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="chart">
+                <div class="chart__price">
+                  <span class="number"></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="details">
+            <h3 class="details__title">Total this month</h3>
+            <div>
+              <span class="total">0.00</span>
+              <div class="more">
+                <span class="more__percentage">+2.4%</span>
+                <span class="more__txt">from last month</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="JS/main.js" defer></script>
+  </body>
+</html>

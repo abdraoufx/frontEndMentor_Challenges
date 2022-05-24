@@ -1,0 +1,37 @@
+// Importing Functions
+@use "../helpers/funcs" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body,
+h3,
+h2,
+h1,
+ul {
+  margin: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+
+  font-size: rem(18);
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+
+  padding: 0;
+}

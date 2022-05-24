@@ -1,0 +1,205 @@
+// Importing Variables
+@use "./variables/variables" as *;
+
+// Importing Mixins
+@use "./helpers/mixins" as *;
+
+// Importing Functions
+@use "./helpers/funcs" as *;
+
+// Importing Global Rules
+@use "./layout/global-rules" as *;
+
+.main {
+  height: 100%;
+
+  background-color: $cream;
+
+  @include center-All;
+
+  padding: 0 rem(25);
+
+  &__boxes {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+
+    &__balance-box {
+      background-color: $sf-Red;
+
+      padding: rem(18) rem(30);
+
+      @include spBeet;
+      align-items: center;
+
+      border-radius: rem(15);
+
+      .text {
+        > h3 {
+          color: $pl-Orange;
+
+          font-weight: normal;
+          font-size: 1rem;
+
+          margin-bottom: rem(6);
+
+          & + .balance-txt {
+            color: $pl-Orange;
+
+            font-weight: bold;
+            font-size: rem(27);
+          }
+        }
+      }
+    }
+
+    &__chart-box {
+      padding: rem(12) rem(35);
+
+      background-color: $pl-Orange;
+
+      border-radius: rem(15);
+
+      .title {
+        font-size: rem(28);
+
+        color: $drk-Brown;
+
+        margin-bottom: rem(50);
+      }
+
+      .days {
+        display: flex;
+        align-items: flex-end;
+        gap: rem(26);
+
+        margin-bottom: rem(30);
+
+        @include ph-brk {
+          gap: rem(15);
+          justify-content: space-between;
+        }
+
+        > li {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: rem(2);
+
+          color: $med-Brown;
+
+          font-size: 1rem;
+
+          .chart {
+            height: 0;
+
+            position: relative;
+
+            background-color: $sf-Red;
+
+            border-radius: rem(7);
+
+            width: rem(48);
+
+            cursor: pointer;
+
+            transition: $trDu;
+
+            @include ph-brk {
+              width: 100%;
+            }
+
+            &:hover {
+              background-color: hsl(10, 100%, 76%);
+            }
+
+            &.wed {
+              background-color: $cyan;
+
+              &:hover {
+                background-color: hsl(187, 49%, 80%);
+              }
+            }
+
+            &__price {
+              position: absolute;
+
+              background-color: $drk-Brown;
+
+              padding: rem(5) rem(10);
+
+              border-radius: rem(5);
+
+              top: rem(-30);
+              left: 50%;
+              transform: translateX(-50%);
+
+              opacity: 0;
+
+              transition: $trDu;
+
+              > .number {
+                color: $pl-Orange;
+
+                font-weight: bold;
+              }
+            }
+
+            &:hover > .chart__price {
+              opacity: 1;
+
+              top: rem(-37);
+            }
+          }
+        }
+      }
+
+      .details {
+        padding: rem(30) 0;
+
+        border-top: 1px solid $cream;
+
+        &__title {
+          color: $med-Brown;
+
+          font-weight: normal;
+          font-size: rem(16);
+        }
+        > div {
+          @include spBeet;
+
+          .total {
+            font-size: rem(44);
+            font-weight: bold;
+
+            color: $drk-Brown;
+          }
+
+          .more {
+            @include dir-col;
+            align-items: flex-end;
+            justify-content: center;
+
+            &__percentage {
+              font-size: rem(18);
+              font-weight: bold;
+
+              color: $drk-Brown;
+            }
+
+            &__txt {
+              color: $med-Brown;
+
+              font-weight: normal;
+              font-size: rem(16);
+
+              @include ph-brk {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

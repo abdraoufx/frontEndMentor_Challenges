@@ -1,5 +1,5 @@
 const charts = document.querySelectorAll(".chart"),
-  filePath = "http://127.0.0.1:5500/data/data.json",
+  filePath = "https://abdraoufx.github.io/frontEndMentor_Challenges/junior/expenses_chart_component/data/data.json",
   spendedDays = document.querySelector(".num-D"),
   totalMonth = document.querySelector(".details .total"),
   balance = document.querySelector(".balance-txt");

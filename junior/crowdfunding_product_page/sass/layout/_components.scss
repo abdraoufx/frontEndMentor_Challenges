@@ -1,0 +1,206 @@
+// Importing Functions
+@use "../helpers/funcs" as *;
+
+// Importing Vars
+@use "../variables/variables" as *;
+
+// Importing Mixins
+@use "../helpers/mixins" as *;
+
+//// Humbuger Icon Component
+.hamburger-icon {
+  width: rem(17);
+  height: rem(14);
+
+  position: relative;
+
+  z-index: 100;
+
+  &.close {
+    > span {
+      &:first-of-type,
+      &:last-of-type {
+        top: rem(6);
+      }
+
+      &:first-of-type {
+        transform: rotate(45deg);
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:last-of-type {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  > span {
+    position: absolute;
+
+    height: 2.5px;
+
+    width: 100%;
+
+    background-color: $white;
+
+    transition: $trDu ease;
+
+    &:first-of-type {
+      top: 0;
+    }
+
+    &:nth-of-type(2) {
+      top: rem(6);
+    }
+
+    &:last-of-type {
+      top: rem(12);
+    }
+  }
+}
+
+// Cards Section > Card Component
+.cards {
+  .content {
+    > .card {
+      background-color: $white;
+
+      padding: rem(25);
+
+      border-radius: rem(10);
+
+      box-shadow: inset 0px 0px 1px 1px rgb(122 122 122 / 20%);
+
+      transition: $trDu;
+
+      width: 100%;
+
+      @media (min-width: rem(546)) and (max-width: rem(910)) {
+        width: 90% !important;
+      }
+      @include des-brk {
+        width: 70%;
+
+        padding: rem(35) rem(40);
+      }
+    }
+  }
+}
+
+// Cyan Button Component
+.cyan-btn {
+  border-radius: 50vw;
+  border: none;
+
+  background-color: $mod-Cyan;
+
+  padding: 0 rem(35);
+
+  height: rem(55);
+
+  color: $white;
+
+  font-size: rem(16);
+  font-weight: 500;
+
+  @include full-center;
+
+  transition: $trDu ease;
+
+  &:hover {
+    background-color: $dark-Cyan;
+  }
+
+  @include des-brk {
+    cursor: pointer;
+  }
+
+  &.out-stack-btn {
+    background-color: rgba($dark-Gray, 0.8);
+
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: rgba($dark-Gray, 0.8);
+    }
+  }
+}
+
+// Pledge Card Component
+.pledges-wrapper {
+  @include dir-col;
+  gap: rem(25);
+
+  .pledge-card {
+    border-radius: rem(10);
+
+    box-shadow: inset 0px 0px 1px 1px rgb(122 122 122 / 20%);
+
+    padding: rem(20);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(20);
+
+    > p {
+      line-height: 1.8 !important;
+    }
+
+    .head {
+      display: flex;
+      flex-direction: column;
+      gap: rem(6);
+
+      @include des-brk {
+        width: 100%;
+
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+
+      .plege-price {
+        color: $mod-Cyan;
+
+        font-size: rem(15);
+        font-weight: 500;
+      }
+    }
+    .footer {
+      @include dir-col;
+      gap: 1.25rem;
+
+      @include des-brk {
+        width: 100%;
+
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+
+        .number {
+          font-weight: bold;
+          font-size: rem(35);
+        }
+        .txt {
+          color: $dark-Gray;
+
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.out-of-stack {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}

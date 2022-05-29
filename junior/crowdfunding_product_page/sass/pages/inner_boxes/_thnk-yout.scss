@@ -1,0 +1,60 @@
+// Imporing Vars
+@use "../../variables/variables" as *;
+
+// Importing Functions
+@use "../../helpers/funcs" as *;
+
+// Importing Mixins
+@use "../../helpers/mixins" as *;
+
+// Importing Global Rules
+@use "../../layout/global-rules" as *;
+
+// Importing Components
+@use "../../layout/global-rules" as *;
+
+.thnk-you {
+  box-shadow: rem(1) rem(1) 0 400vh rgb(0 0 0 / 30%) !important;
+
+  position: absolute;
+  top: rem(150);
+
+  z-index: 400;
+
+  max-width: rem(550);
+
+  @include dir-col;
+  align-items: center;
+
+  gap: rem(25);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: $trDu ease-in-out;
+
+  > {
+    img {
+      margin-bottom: rem(20);
+
+      width: rem(90);
+    }
+
+    h3 {
+      font-size: rem(22);
+    }
+
+    p {
+      line-height: 2;
+    }
+  }
+
+  &.display {
+    top: rem(60);
+
+    opacity: 1;
+
+    pointer-events: all;
+  }
+}

@@ -1,0 +1,32 @@
+// Importing Functions
+@use "./funcs" as *;
+
+// Flexbox Mixins
+@mixin spBeet {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin full-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin dir-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin col-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+// Media Queries Mixins
+@mixin des-brk {
+  @media (min-width: rem(660)) {
+    @content;
+  }
+}

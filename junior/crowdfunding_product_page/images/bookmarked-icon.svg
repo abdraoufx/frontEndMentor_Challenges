@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="56" height="56">
+	<title>icon-bookmark-svg</title>
+	<style>
+		.s0 { fill: #147b74 } 
+		.s1 { fill: #ffffff } 
+	</style>
+	<g id="Layer">
+		<circle id="Layer" class="s0" cx="28" cy="28" r="28"/>
+		<path id="Layer" fill-rule="evenodd" class="s1" d="m33 19v18l-5-5.1-5 5.1v-18z"/>
+	</g>
+</svg>

@@ -1,0 +1,97 @@
+// Importing Variables
+@use "../variables/variables" as *;
+
+// Importing Functions
+@use "../helpers/funcs" as *;
+
+// Importing Mixins
+@use "../helpers/mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+
+  scrollbar-width: 0;
+}
+
+ul {
+  list-style: none;
+
+  padding: 0;
+}
+
+li {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  display: block;
+
+  font-family: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center-left {
+  text-align: center;
+
+  @include des-brk {
+    text-align: left;
+  }
+}
+
+.short-txt {
+  color: $dark-Gray;
+
+  line-height: 1.5;
+
+  font-size: rem(15);
+}
+
+.card-title {
+  font-weight: bold;
+
+  color: $black;
+}
+
+.container {
+  padding: 0 rem(25);
+
+  margin-inline: auto;
+
+  max-width: rem(1135);
+}

@@ -1,0 +1,36 @@
+// Importing Vars
+@use "./variables/variables" as *;
+
+// Importing Functions
+@use "./helpers/funcs" as *;
+
+// Importing Mixins
+@use "./helpers/mixins" as *;
+
+// Importing Global Rules
+@use "./layout/global-rules" as *;
+
+// Importing Components
+@use "./layout/components" as *;
+
+//// Importing Header
+@use "./pages/header" as *;
+
+//// Importing Cards Section
+@use "./pages/cards" as *;
+
+// Importing Back This Project Card
+@use "./pages/inner_boxes/back-t-project" as *;
+
+// Importing Thank You Box
+@use "./pages/inner_boxes/thnk-yout" as *;
+
+.main-header {
+  background-image: url("../images/image-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include des-brk {
+    background-image: url("../images/image-hero-desktop.jpg");
+  }
+}

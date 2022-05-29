@@ -1,0 +1,111 @@
+// Importing Variables
+@use "../variables/variables" as *;
+
+// Importing Functions
+@use "../helpers/funcs" as *;
+
+// Importing Mixins
+@use "../helpers/mixins" as *;
+
+// Importing Global Rules
+@use "../layout/global-rules" as *;
+
+// Importing Components
+@use "../layout/components" as *;
+
+.main-header {
+  padding: rem(40) 0 rem(310);
+
+  box-shadow: inset 0rem 3rem 4rem 0rem hsl(0deg 0% 0% / 44%);
+
+  &__container {
+    @include spBeet;
+    align-items: center;
+
+    position: relative;
+
+    .logo {
+      position: relative;
+
+      z-index: 100;
+    }
+
+    .mobile-nav {
+      position: absolute;
+      top: rem(50);
+      left: 50%;
+
+      transform: translateX(-300%);
+
+      z-index: 50;
+
+      width: 90%;
+
+      display: flex;
+      flex-direction: column;
+
+      background-color: $white;
+
+      border-radius: rem(10);
+
+      transition: $trDu ease;
+
+      &.show {
+        transform: translateX(-50%);
+
+        box-shadow: rem(1) rem(1) rem(1) rem(390) rgb(0 0 0 / 20%);
+      }
+
+      > li {
+        padding: rem(20);
+
+        &:not(:last-of-type) {
+          border-bottom: rem(1) solid rgba($dark-Gray, 0.1);
+        }
+
+        a {
+          color: $black;
+
+          font-weight: 500;
+          font-size: rem(18);
+        }
+      }
+
+      @include des-brk {
+        display: none;
+      }
+    }
+
+    .desk-nav {
+      display: none;
+
+      gap: rem(35);
+
+      > li {
+        a {
+          color: $white;
+
+          font-size: rem(15);
+
+          opacity: 0.95;
+
+          transition: $trDu ease;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      @include des-brk {
+        display: flex;
+      }
+    }
+
+    .icons {
+      @include des-brk {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,284 @@
+// Imporing Vars
+@use "../../variables/variables" as *;
+
+// Importing Functions
+@use "../../helpers/funcs" as *;
+
+// Importing Mixins
+@use "../../helpers/mixins" as *;
+
+// Importing Global Rules
+@use "../../layout/global-rules" as *;
+
+// Importing Components
+@use "../../layout/global-rules" as *;
+
+.back-t-project {
+  position: absolute;
+
+  z-index: 400;
+
+  top: rem(-160);
+
+  @include dir-col;
+  gap: rem(10);
+
+  box-shadow: rem(1) rem(1) 0 400vh rgb(0 0 0 / 30%) !important;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: $trDu ease-in-out;
+
+  &.display {
+    opacity: 1;
+
+    pointer-events: all;
+
+    top: rem(-120);
+  }
+
+  .img__wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    > img {
+      @include des-brk {
+        cursor: pointer;
+      }
+    }
+  }
+
+  > h1 {
+    font-size: rem(20);
+
+    @include des-brk {
+      font-size: medium;
+    }
+  }
+
+  > p {
+    margin-bottom: rem(15);
+  }
+
+  .modal {
+    box-shadow: inset 0px 0px 1px 1px rgb(122 122 122 / 20%);
+
+    border-radius: rem(10);
+
+    &.checked:not(.out-of-stack) {
+      border: rem(2) solid $mod-Cyan;
+
+      .check::before {
+        opacity: 1 !important;
+      }
+
+      .upper-content {
+        border-bottom: 1px solid rgba($dark-Gray, 0.2);
+      }
+
+      .pay-section {
+        display: block;
+
+        @include des-brk {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          align-items: center;
+
+          .txt {
+            text-align: left;
+
+            margin: 0;
+          }
+
+          .btns {
+            gap: rem(8);
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+
+    @include des-brk {
+      cursor: pointer;
+    }
+
+    .upper-content {
+      padding: 1.5rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: rem(25);
+
+      .check-section {
+        display: flex;
+        align-items: center;
+        gap: rem(15);
+
+        .check {
+          height: rem(23);
+          width: rem(23);
+
+          border-radius: 50%;
+          border: 1px solid rgba($dark-Gray, 0.5);
+
+          position: relative;
+
+          @include des-brk {
+            cursor: pointer;
+          }
+
+          &::before {
+            content: "";
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 60%;
+            height: 60%;
+
+            background-color: $mod-Cyan;
+
+            border-radius: 50%;
+
+            opacity: 0;
+
+            transition: $trDu ease;
+          }
+        }
+        .head-txt {
+          @include des-brk {
+            flex: 1;
+
+            @include spBeet;
+          }
+
+          .txt {
+            display: flex;
+            align-items: center;
+            gap: rem(10);
+
+            > {
+              span:first-of-type {
+                font-size: rem(15);
+              }
+              span:nth-of-type(2) {
+                color: $mod-Cyan;
+
+                font-size: rem(15);
+                font-weight: 500;
+              }
+            }
+          }
+
+          .left {
+            display: none;
+
+            @include des-brk {
+              display: flex;
+              align-items: center;
+              gap: rem(6);
+            }
+
+            .number {
+              font-size: rem(20);
+            }
+
+            .txt {
+              color: $dark-Gray;
+
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    .short-txt {
+      @include des-brk {
+        max-width: rem(560);
+
+        margin: 0 auto;
+      }
+      & + .left {
+        display: flex;
+        align-items: center;
+        gap: rem(6);
+
+        @include des-brk {
+          display: none;
+        }
+
+        > {
+          .number {
+            font-size: rem(20);
+          }
+          .txt {
+            color: $dark-Gray;
+
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .pay-section {
+      padding: rem(21) 1.5rem;
+
+      display: none;
+
+      .txt {
+        display: block;
+
+        margin-bottom: rem(15);
+      }
+
+      .btns {
+        @include spBeet;
+        align-items: center;
+        flex-wrap: wrap;
+
+        > {
+          .price,
+          .cyan-btn {
+            height: rem(50) !important;
+
+            @include full-center;
+          }
+          .price {
+            border: 1px solid rgba($dark-Gray, 0.3);
+            border-radius: 50vw;
+
+            padding: 0 1.7rem;
+
+            display: flex;
+            justify-content: flex-start;
+            gap: rem(6);
+
+            width: rem(125);
+
+            > {
+              span {
+                &:first-of-type {
+                  color: $dark-Gray;
+                }
+                &:last-of-type {
+                  font-size: rem(15);
+                }
+              }
+            }
+          }
+
+          .cyan-btn {
+            padding: 0 1.8rem !important;
+          }
+        }
+      }
+    }
+  }
+}

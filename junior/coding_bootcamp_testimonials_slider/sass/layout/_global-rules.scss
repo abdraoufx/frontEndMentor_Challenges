@@ -1,0 +1,45 @@
+@use "../variables/variables" as *;
+
+@use "../helpers/funcs" as *;
+
+@use "../helpers/mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: rem(1200);
+
+  padding: 0 rem(20);
+
+  margin-inline: auto;
+
+  @include brk {
+    max-width: 68rem;
+  }
+}

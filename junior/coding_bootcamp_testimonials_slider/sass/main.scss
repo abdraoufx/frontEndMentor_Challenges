@@ -1,0 +1,180 @@
+@use "./variables/variables" as *;
+
+@use "./helpers/funcs" as *;
+
+@use "./helpers/mixins" as *;
+
+@use "./layout/global-rules" as *;
+
+main {
+  background-image: url(../images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 80%;
+
+  padding-top: rem(25);
+
+  overflow-x: hidden;
+
+  @include brk {
+    background-size: rem(400);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    padding-top: rem(25);
+
+    height: 100%;
+
+    background-image: url(../images/pattern-bg.svg);
+    background-size: rem(320);
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    @include brk {
+      flex-flow: row-reverse wrap;
+
+      background-size: contain;
+      background-position: right top;
+    }
+
+    .img-wrapper {
+      position: relative;
+
+      width: rem(250);
+      height: rem(250);
+
+      @include brk {
+        width: rem(500);
+        height: rem(500);
+      }
+
+      > img {
+        border-radius: rem(6);
+
+        box-shadow: rgb(50 50 93 / 25%) 0px 50px 65px -20px,
+          rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+
+        position: absolute;
+
+        transition: $trDu ease-in;
+
+        &.tanya-img {
+          transform: translateX(300%);
+
+          &.show {
+            transform: translateX(0);
+          }
+        }
+
+        &.john-img {
+          transform: translateX(-300%);
+
+          &.show {
+            transform: translateX(0);
+          }
+        }
+      }
+
+      .changers {
+        position: absolute;
+
+        bottom: rem(-18);
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: $white;
+
+        border-radius: 50vw;
+
+        @include brk {
+          left: rem(100);
+        }
+
+        > img {
+          width: rem(40);
+
+          padding: rem(12) rem(15);
+
+          @include brk {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .text {
+      padding-top: rem(60);
+
+      background-image: url("../images/pattern-quotes.svg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: rem(60);
+
+      @include dir-col;
+
+      @include brk {
+        position: absolute;
+        left: rem(135);
+
+        background-position: rem(100) 0;
+        background-size: 7em;
+      }
+
+      > .testim {
+        text-align: center;
+
+        font-size: rem(20);
+        font-weight: 100;
+
+        line-height: 1.4;
+
+        color: $dark-Blue;
+
+        margin-bottom: rem(15);
+
+        @include brk {
+          font-size: rem(32);
+
+          max-width: rem(650);
+
+          text-align: left;
+        }
+      }
+      > .info {
+        @include dir-col;
+        align-items: center;
+        gap: rem(3);
+
+        @include brk {
+          flex-flow: row;
+
+          gap: rem(15);
+        }
+
+        .name {
+          color: $dark-Blue;
+
+          font-weight: bold;
+
+          @include brk {
+            font-size: rem(20);
+          }
+        }
+        .job {
+          font-size: rem(14.5);
+          font-weight: 500;
+
+          color: $grysh-Blue;
+
+          @include brk {
+            font-size: rem(20);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 75rem;
+  padding: 0 1.25rem;
+  margin-inline: auto;
+}
+@media (min-width: 50.0625rem) {
+  .container {
+    max-width: 68rem;
+  }
+}
+
+main {
+  background-image: url(../images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 80%;
+  padding-top: 1.5625rem;
+  overflow-x: hidden;
+}
+@media (min-width: 50.0625rem) {
+  main {
+    background-size: 25rem;
+  }
+}
+main .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 1.5625rem;
+  height: 100%;
+  background-image: url(../images/pattern-bg.svg);
+  background-size: 20rem;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+@media (min-width: 50.0625rem) {
+  main .container {
+    flex-flow: row-reverse wrap;
+    background-size: contain;
+    background-position: right top;
+  }
+}
+main .container .img-wrapper {
+  position: relative;
+  width: 15.625rem;
+  height: 15.625rem;
+}
+@media (min-width: 50.0625rem) {
+  main .container .img-wrapper {
+    width: 31.25rem;
+    height: 31.25rem;
+  }
+}
+main .container .img-wrapper > img {
+  border-radius: 0.375rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 65px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  position: absolute;
+  transition: 0.4s ease-in;
+}
+main .container .img-wrapper > img.tanya-img {
+  transform: translateX(300%);
+}
+main .container .img-wrapper > img.tanya-img.show {
+  transform: translateX(0);
+}
+main .container .img-wrapper > img.john-img {
+  transform: translateX(-300%);
+}
+main .container .img-wrapper > img.john-img.show {
+  transform: translateX(0);
+}
+main .container .img-wrapper .changers {
+  position: absolute;
+  bottom: -1.125rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 50vw;
+}
+@media (min-width: 50.0625rem) {
+  main .container .img-wrapper .changers {
+    left: 6.25rem;
+  }
+}
+main .container .img-wrapper .changers > img {
+  width: 2.5rem;
+  padding: 0.75rem 0.9375rem;
+}
+@media (min-width: 50.0625rem) {
+  main .container .img-wrapper .changers > img {
+    cursor: pointer;
+  }
+}
+main .container .text {
+  padding-top: 3.75rem;
+  background-image: url("../images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 3.75rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 50.0625rem) {
+  main .container .text {
+    position: absolute;
+    left: 8.4375rem;
+    background-position: 6.25rem 0;
+    background-size: 7em;
+  }
+}
+main .container .text > .testim {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 100;
+  line-height: 1.4;
+  color: hsl(240deg, 38%, 20%);
+  margin-bottom: 0.9375rem;
+}
+@media (min-width: 50.0625rem) {
+  main .container .text > .testim {
+    font-size: 2rem;
+    max-width: 40.625rem;
+    text-align: left;
+  }
+}
+main .container .text > .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1875rem;
+}
+@media (min-width: 50.0625rem) {
+  main .container .text > .info {
+    flex-flow: row;
+    gap: 0.9375rem;
+  }
+}
+main .container .text > .info .name {
+  color: hsl(240deg, 38%, 20%);
+  font-weight: bold;
+}
+@media (min-width: 50.0625rem) {
+  main .container .text > .info .name {
+    font-size: 1.25rem;
+  }
+}
+main .container .text > .info .job {
+  font-size: 0.90625rem;
+  font-weight: 500;
+  color: hsl(240deg, 18%, 77%);
+}
+@media (min-width: 50.0625rem) {
+  main .container .text > .info .job {
+    font-size: 1.25rem;
+  }
+}/*# sourceMappingURL=main.css.map */

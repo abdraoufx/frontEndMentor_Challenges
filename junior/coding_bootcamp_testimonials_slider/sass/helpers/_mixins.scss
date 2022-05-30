@@ -1,0 +1,20 @@
+@use "./funcs" as *;
+
+// Flexbox MIxins
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin dir-col {
+  display: flex;
+  flex-direction: column;
+}
+
+// Media Queries Mixins
+@mixin brk {
+  @media (min-width: rem(801)) {
+    @content;
+  }
+}

@@ -1,0 +1,151 @@
+@use "../helpers/funcs" as *;
+
+@use "../helpers/mixins" as *;
+
+@use "../variables/variables" as *;
+
+.main-header {
+  padding-top: rem(40);
+
+  &__container {
+    @include spBeet;
+
+    padding-bottom: 4.5rem;
+
+    position: relative;
+
+    @include ph-brk {
+      align-items: center;
+
+      padding-bottom: 1.5rem;
+    }
+
+    .left-side {
+      display: flex;
+      align-items: center;
+      gap: rem(40);
+
+      .desk-nav {
+        @include ph-brk {
+          display: none;
+        }
+        &__content {
+          display: flex;
+          gap: rem(30);
+        }
+      }
+    }
+    .right-side {
+      display: flex;
+      align-items: center;
+      gap: rem(32);
+
+      .sign-up {
+        border-radius: 100vmax;
+
+        padding: rem(10) rem(22);
+      }
+
+      @include ph-brk {
+        display: none;
+      }
+    }
+
+    .hamb-icon {
+      display: none;
+
+      width: rem(25);
+      height: rem(20);
+
+      &.close {
+        height: rem(2);
+
+        span:first-of-type {
+          transform: rotate(45deg);
+        }
+
+        span:nth-of-type(2) {
+          display: none;
+        }
+
+        span:last-of-type {
+          transform: rotate(-45deg);
+        }
+      }
+
+      > span {
+        width: 100%;
+        height: rem(3);
+
+        background-color: $gr-vio;
+
+        transition: $trnsDu;
+      }
+
+      @include ph-brk {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    .mob-nav {
+      position: absolute;
+      z-index: 70000;
+
+      bottom: rem(-350); // 350 => Ele Own Height
+
+      width: calc(100% - rem(50));
+
+      padding: rem(35) rem(15);
+
+      border-radius: rem(7);
+
+      background-color: $drk-vio;
+
+      text-align: center;
+
+      transform: translateX(-150%);
+
+      transition: $trnsDu;
+
+      &.show-nav {
+        transform: translateX(0%);
+      }
+
+      > * > * > a {
+        font-size: rem(17);
+      }
+
+      &__top-section {
+        display: flex;
+        flex-direction: column;
+        gap: rem(25);
+
+        border-bottom: rem(1) solid rgba($gr-vio, 0.3);
+
+        padding-bottom: rem(30);
+      }
+
+      &__bot-section {
+        padding-top: rem(30);
+
+        li {
+          &:first-of-type {
+            margin-bottom: rem(20);
+          }
+
+          button {
+            width: 100%;
+
+            border-radius: 100vmax;
+
+            padding: rem(10) 0;
+
+            font-size: rem(17);
+          }
+        }
+      }
+    }
+  }
+}

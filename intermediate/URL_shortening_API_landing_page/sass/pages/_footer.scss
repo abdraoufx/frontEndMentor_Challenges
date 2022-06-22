@@ -1,0 +1,85 @@
+@use "../helpers/funcs" as *;
+
+@use "../helpers/mixins" as *;
+
+@use "../variables/variables" as *;
+
+.main-footer {
+  padding: rem(50) 0 rem(60);
+
+  background-color: $vr-Drk-vio;
+
+  &__container {
+    @include spBeet;
+    align-items: flex-start;
+
+    @include ph-brk {
+      align-items: center;
+      flex-direction: column;
+      gap: rem(40);
+    }
+
+    .logo {
+      filter: brightness(0) invert(1);
+    }
+
+    .links {
+      @include spBeet;
+      flex-wrap: wrap;
+      flex-basis: 60%;
+
+      @include ph-brk {
+        flex-direction: column;
+        text-align: center;
+        gap: rem(35);
+      }
+
+      > * > * > *:not(.icons),
+      > * > .bold-one > a {
+        transition: $trnsDu ease;
+
+        &:hover {
+          color: $cyan;
+        }
+      }
+
+      .bold-one {
+        color: $white;
+
+        font-size: rem(16.5);
+
+        margin-bottom: rem(15);
+
+        > a {
+          color: inherit;
+        }
+      }
+
+      li {
+        &:not(:last-of-type) {
+          margin-bottom: rem(7);
+        }
+
+        a {
+          color: $gray;
+
+          font-size: rem(14);
+        }
+      }
+
+      .icons {
+        display: flex;
+        align-items: flex-start;
+        gap: rem(20);
+
+        > svg {
+          color: $white;
+
+          cursor: pointer;
+
+          font-size: rem(25);
+        }
+      }
+    }
+  }
+}

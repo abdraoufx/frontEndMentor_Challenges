@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortening API Landing Page</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesomne -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      defer
+      crossorigin
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="sass/main.css" />
+  </head>
+  <body>
+    <main class="main">
+      <header class="main-header">
+        <div class="main-header__container container">
+          <div class="left-side">
+            <img src="images/logo.svg" alt="Logo" class="logo" />
+            <nav class="desk-nav">
+              <ul class="desk-nav__content">
+                <li><a href="#features" class="gr-bold">Features</a></li>
+                <li><a href="#pricing" class="gr-bold">Pricing</a></li>
+                <li><a href="#resources" class="gr-bold">Resources</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="right-side">
+            <a href="#login" class="gr-bold">Login</a>
+            <button class="sign-up cyan-btn">Sign up</button>
+          </div>
+          <div class="hamb-icon" id="hamb-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="mob-nav" id="mobile-nav">
+            <ul class="mob-nav__top-section">
+              <li><a href="#features" class="bl-white">Features</a></li>
+              <li><a href="#pricing" class="bl-white">Pricing</a></li>
+              <li><a href="#resources" class="bl-white">Resources</a></li>
+            </ul>
+            <ul class="mob-nav__bot-section">
+              <li><a href="#" class="bl-white">Login</a></li>
+              <li><button class="cyan-btn">Sign Up</button></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="get-start">
+        <div class="get-start__container container">
+          <div class="txt-side">
+            <h1 class="txt-side__title">More than just shorter links</h1>
+            <p class="txt-side__txt-intro">
+              Build your brand’s recognition and get detailed insights on how
+              your links are performing.
+            </p>
+            <button class="cyan-btn gts-btn">Get Started</button>
+          </div>
+          <img
+            src="images/illustration-working.svg"
+            alt="illustration Working Image"
+            class="illu-work-img"
+          />
+        </div>
+      </section>
+      <section class="stats">
+        <div class="stats__container container">
+          <div class="shorten-box">
+            <div class="shorten-box__the-input">
+              <input
+                type="text"
+                id="short-input"
+                class="shorten-box__the-input__input"
+                placeholder="Shorten a link here..."
+              />
+              <span class="shorten-box__the-input__error"
+                >please add a link</span
+              >
+            </div>
+            <button class="shorten-box__btn cyan-btn" id="sb-data">
+              Shorten It!
+            </button>
+          </div>
+          <div class="short-result"></div>
+          <h2 class="stats__container__title text-center">
+            Advanced Statistics
+          </h2>
+          <p class="stats__container__small-txt text-center">
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+          <div class="stats__container__boxes">
+            <div class="box">
+              <img
+                src="images/icon-brand-recognition.svg"
+                alt="Brand Recognition Icon"
+              />
+              <h3 class="title">Brand Recognition</h3>
+              <p class="txt">
+                Boost your brand recognition with each click. Generic links
+                don’t mean a thing. Branded links help instil confidence in your
+                content.
+              </p>
+            </div>
+            <div class="box">
+              <img
+                src="images/icon-detailed-records.svg"
+                alt="Detailed Records Iconb"
+              />
+              <h3 class="title">Detailed Records</h3>
+              <p class="txt">
+                Gain insights into who is clicking your links. Knowing when and
+                where people engage with your content helps inform better
+                decisions.
+              </p>
+            </div>
+            <div class="box">
+              <img
+                src="images/icon-fully-customizable.svg"
+                alt="Full Custom Icon"
+              />
+              <h3 class="title">Fully Customizable</h3>
+              <p class="txt">
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="boost">
+        <div class="boost__container container">
+          <h4 class="boost__container__title text-center">
+            Boost your links today
+          </h4>
+          <button class="gts-btn cyan-btn">Get Started</button>
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="main-footer__container container">
+          <img src="images/logo.svg" alt="Logo" class="logo" />
+          <div class="links">
+            <ul>
+              <h5 class="bold-one"><a href="#features">Features</a></h5>
+              <li><a href="#link-shortening">Link Shortening</a></li>
+              <li><a href="#branded-links">Branded Links</a></li>
+              <li><a href="#analytics">Analytics</a></li>
+            </ul>
+            <ul>
+              <h5 class="bold-one"><a href="#resources">Resources</a></h5>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#developers">Developers</a></li>
+              <li><a href="#support">Support</a></li>
+            </ul>
+            <ul>
+              <h5 class="bold-one"><a href="#company">Company</a></h5>
+              <li><a href="#about">About</a></li>
+              <li><a href="#our-team">Our Team</a></li>
+              <li><a href="#careers">Careers</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="icons">
+              <i class="fa-brands fa-facebook-square"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-pinterest"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+@use "../helpers/funcs" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+p,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+.container {
+  max-width: rem(1170);
+
+  padding: 0 rem(25);
+  margin-inline: auto;
+}

@@ -1,0 +1,46 @@
+@use "./helpers/funcs" as *;
+
+@use "./variables/variables" as *;
+
+@use "./helpers/mixins" as *;
+
+@use "./layout/global-rules" as *;
+
+@use "./layout/components" as *;
+
+@use "./pages/header" as *;
+
+@use "./pages/get-start" as *;
+
+@use "./pages/stats" as *;
+
+@use "./pages/boost-sect" as *;
+
+@use "./pages/footer" as *;
+
+main {
+  overflow-x: hidden;
+}
+
+.shorten-box {
+  background-image: url(../images/bg-shorten-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include ph-brk {
+    background-image: url(../images/bg-shorten-mobile.svg);
+    background-size: contain;
+    background-position: right;
+  }
+}
+
+.boost {
+  background-image: url(../images/bg-boost-desktop.svg);
+  background-repeat: no-repeat;
+
+  @include ph-brk {
+    background-image: url(../images/bg-boost-mobile.svg);
+    background-position: right;
+    background-size: 100% 100%;
+  }
+}

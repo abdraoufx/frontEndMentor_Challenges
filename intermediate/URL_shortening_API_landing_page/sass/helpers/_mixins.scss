@@ -1,0 +1,14 @@
+@use "./funcs" as *;
+
+// FlexBox Mixins
+@mixin spBeet {
+  display: flex;
+  justify-content: space-between;
+}
+
+// BreakPoints Mixins
+@mixin ph-brk {
+  @media (max-width: rem(715)) {
+    @content;
+  }
+}

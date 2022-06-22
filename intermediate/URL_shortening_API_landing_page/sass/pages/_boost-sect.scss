@@ -1,0 +1,31 @@
+@use "../helpers/funcs" as *;
+
+@use "../helpers/mixins" as *;
+
+@use "../variables/variables" as *;
+
+.boost {
+  padding: rem(55) 0;
+
+  background-color: $drk-vio;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(25);
+
+    @include ph-brk {
+      gap: rem(15);
+    }
+
+    &__title {
+      color: $white;
+
+      font-size: rem(40);
+
+      @include ph-brk {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use "../variables/variables" as *;
+
+@use "../helpers/funcs" as *;
+
+.gr-bold {
+  color: $gr-vio;
+
+  font-weight: bold;
+  font-size: rem(15);
+
+  transition: $trnsDu ease-in-out;
+
+  &:hover {
+    color: $vr-Drk-Blue;
+  }
+}
+
+.bl-white {
+  color: $white;
+
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.cyan-btn {
+  font-weight: bold;
+
+  background-color: $cyan;
+  color: $white;
+
+  border: none;
+
+  cursor: pointer;
+
+  transition: $trnsDu ease-in;
+
+  &:hover {
+    background-color: hsl(179, 56%, 75%);
+  }
+}
+
+.gts-btn {
+  padding: rem(12) rem(38);
+
+  font-size: rem(18);
+
+  border-radius: 100vmax;
+}

@@ -1,0 +1,89 @@
+@use "../helpers/funcs" as *;
+
+@use "../helpers/mixins" as *;
+
+@use "../variables/variables" as *;
+
+.main {
+  &.theme-2 {
+    background-color: $th-Two-main-bg;
+  }
+
+  .head {
+    &.theme-2 {
+      > {
+        .logo,
+        .choose-theme {
+          color: $th-Two-txt-grYell;
+        }
+
+        .choose-theme {
+          .choose-theme__themes {
+            .toggler {
+              background-color: $th-Two-tog-bg;
+              .circle {
+                background-color: $th-Two-key-orng;
+
+                transition: $trnsDu;
+
+                @include hover(hsl(25, 100%, 61%));
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .screen {
+    &.theme-2 {
+      background-color: $th-Two-scr-bg;
+
+      .calc-data {
+        color: $th-Two-txt-grYell;
+
+        background-color: inherit;
+      }
+    }
+  }
+
+  .keys-wrapper {
+    &.theme-2 {
+      background-color: $th-Two-tog-bg;
+
+      .key {
+        transition: $trnsDu;
+
+        &:not(.reset-btn, .equal-btn, .del-btn) {
+          background-color: $th-Two-key-yellow;
+          color: $th-Two-txt-grYell;
+
+          @include key-bxShdw($th-Two-key-grshOrng);
+
+          @include hover($white);
+        }
+
+        &.reset-btn,
+        &.del-btn,
+        &.equal-btn {
+          color: $white;
+        }
+
+        &.reset-btn,
+        &.del-btn {
+          background-color: $th-Two-key-bg;
+
+          @include key-bxShdw($th-Two-key-shdw);
+          @include hover(hsl(185, 41%, 56%));
+        }
+
+        &.equal-btn {
+          background-color: $th-Two-key-orng;
+
+          @include key-bxShdw($th-Two-key-drkOrng);
+          @include hover(hsl(25, 100%, 61%));
+        }
+      }
+    }
+  }
+}

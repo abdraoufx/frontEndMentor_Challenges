@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass/main.css" />
+  </head>
+  <body>
+    <main class="main changable-theme theme-1">
+      <div class="main__container container">
+        <div class="the-content">
+          <div class="head changable-theme theme-1">
+            <span class="logo">calc</span>
+            <div class="choose-theme">
+              <span class="txt">theme</span>
+              <div class="choose-theme__themes">
+                <div class="theme-index">
+                  <span>1</span>
+                  <span>2</span>
+                  <span>3</span>
+                </div>
+                <div class="toggler">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="screen changable-theme theme-1">
+            <input type="text" class="calc-data" id="user-data" />
+          </div>
+          <div class="keys-wrapper changable-theme theme-1">
+            <button class="key">7</button>
+            <button class="key">8</button>
+            <button class="key">9</button>
+            <button class="key del-btn" id="delete-btn">del</button>
+            <button class="key">4</button>
+            <button class="key">5</button>
+            <button class="key">6</button>
+            <button class="key operator">+</button>
+            <button class="key">1</button>
+            <button class="key">2</button>
+            <button class="key">3</button>
+            <button class="key operator">-</button>
+            <button class="key decimal">.</button>
+            <button class="key">0</button>
+            <button class="key operator">/</button>
+            <button class="key operator">x</button>
+            <button class="key reset-btn">reset</button>
+            <button class="key operator equal-btn">=</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

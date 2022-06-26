@@ -1,0 +1,39 @@
+@use "../helpers/funcs" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+}
+
+input {
+  font-family: inherit;
+}
+
+button {
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.container {
+  max-width: rem(1170);
+
+  padding: 0 rem(25);
+
+  margin-inline: auto;
+}

@@ -1,0 +1,58 @@
+//// Colors
+
+/// Theme 1
+// Bgs
+$th-One-main-bg: hsl(222, 26%, 31%);
+$th-One-tog-bg: hsl(223, 31%, 20%);
+$th-One-scr-bg: hsl(224, 36%, 15%);
+
+// Keys
+$th-One-key-bg: hsl(225, 21%, 49%);
+$th-One-key-shdw: hsl(224, 28%, 35%);
+$th-One-key-red: hsl(6, 63%, 50%);
+$th-One-key-drkRed: hsl(6, 70%, 34%);
+$th-One-key-bg-orng: hsl(30, 25%, 89%);
+$th-One-key-shdw-orng: hsl(28, 16%, 65%);
+
+// Text
+$th-One-txt-grBlue: hsl(221, 14%, 31%);
+
+/// Theme 2
+// Bgs
+$th-Two-main-bg: hsl(0, 0%, 90%);
+$th-Two-tog-bg: hsl(0, 5%, 81%);
+$th-Two-scr-bg: hsl(0, 0%, 93%);
+
+// Keys
+$th-Two-key-bg: hsl(185, 42%, 37%);
+$th-Two-key-shdw: hsl(185, 58%, 25%);
+$th-Two-key-orng: hsl(25, 98%, 40%);
+$th-Two-key-drkOrng: hsl(25, 99%, 27%);
+$th-Two-key-yellow: hsl(45, 7%, 89%);
+$th-Two-key-grshOrng: hsl(35, 11%, 61%);
+
+// Text
+$th-Two-txt-grYell: hsl(60, 10%, 19%);
+
+/// Theme 3
+// Bgs
+$th-three-main-bg: hsl(268, 75%, 9%);
+$th-three-tog-a-scr-bg: hsl(268, 71%, 12%);
+
+// Keys
+$th-three-key-bg: hsl(281, 89%, 26%);
+$th-three-key-shdw: hsl(285, 91%, 52%);
+$th-three-key-prCyan: hsl(176, 100%, 44%);
+$th-three-key-sfCyan: hsl(177, 92%, 70%);
+$th-three-key-drkV: hsl(268, 47%, 21%);
+$th-three-key-drkMag: hsl(290, 70%, 36%);
+
+// Text
+$th-three-txt-lgYellow: hsl(52, 100%, 62%);
+$th-three-txt-drkBlue: hsl(198, 20%, 13%);
+
+/// Global Colors
+$white: hsl(0, 0, 100%);
+
+//// Durations
+$trnsDu: 0.3s;

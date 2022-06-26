@@ -1,0 +1,94 @@
+@use "../helpers/funcs" as *;
+
+@use "../helpers/mixins" as *;
+
+@use "../variables/variables" as *;
+
+@use "../helpers/funcs" as *;
+
+@use "../helpers/mixins" as *;
+
+@use "../variables/variables" as *;
+
+.main {
+  &.theme-3 {
+    background-color: $th-three-main-bg;
+  }
+
+  .head {
+    &.theme-3 {
+      > {
+        .logo,
+        .choose-theme {
+          color: $th-three-txt-lgYellow;
+        }
+
+        .choose-theme {
+          .choose-theme__themes {
+            .toggler {
+              background-color: $th-three-tog-a-scr-bg;
+              .circle {
+                background-color: $th-three-key-prCyan;
+
+                transition: $trnsDu;
+
+                @include hover(hsl(177, 100%, 79%));
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .screen {
+    &.theme-3 {
+      background-color: $th-three-tog-a-scr-bg;
+
+      .calc-data {
+        color: $th-three-txt-lgYellow;
+
+        background-color: inherit;
+      }
+    }
+  }
+
+  .keys-wrapper {
+    &.theme-3 {
+      background-color: $th-three-tog-a-scr-bg;
+
+      .key {
+        transition: $trnsDu;
+
+        &:not(.reset-btn, .equal-btn, .del-btn) {
+          background-color: $th-three-key-drkV;
+          color: $th-three-txt-lgYellow;
+
+          @include key-bxShdw($th-three-key-drkMag);
+
+          @include hover(rgb(107, 51, 171));
+        }
+
+        &.reset-btn,
+        &.del-btn {
+          color: $white;
+        }
+
+        &.reset-btn,
+        &.del-btn {
+          background-color: $th-three-key-bg;
+
+          @include key-bxShdw($th-three-key-shdw);
+          @include hover(hsl(280, 55%, 44%));
+        }
+
+        &.equal-btn {
+          background-color: $th-three-key-prCyan;
+
+          @include key-bxShdw($th-three-key-sfCyan);
+          @include hover(hsl(177, 100%, 79%));
+        }
+      }
+    }
+  }
+}

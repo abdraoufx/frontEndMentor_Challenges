@@ -1,0 +1,89 @@
+@use "../helpers/funcs" as *;
+
+@use "../helpers/mixins" as *;
+
+@use "../variables/variables" as *;
+
+.main {
+  &.theme-1 {
+    background-color: $th-One-main-bg;
+  }
+
+  .head {
+    &.theme-1 {
+      > {
+        .logo,
+        .choose-theme {
+          color: $white;
+        }
+
+        .choose-theme {
+          .choose-theme__themes {
+            .toggler {
+              background-color: $th-One-tog-bg;
+              .circle {
+                background-color: $th-One-key-red;
+
+                transition: $trnsDu;
+
+                @include hover(hsl(6, 93%, 67%));
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .screen {
+    &.theme-1 {
+      background-color: $th-One-scr-bg;
+
+      .calc-data {
+        color: $white;
+
+        background-color: inherit;
+      }
+    }
+  }
+
+  .keys-wrapper {
+    &.theme-1 {
+      background-color: $th-One-tog-bg;
+
+      .key {
+        transition: $trnsDu;
+
+        &:not(.reset-btn, .equal-btn, .del-btn) {
+          background-color: $th-One-key-bg-orng;
+          color: $th-One-txt-grBlue;
+
+          @include key-bxShdw($th-One-key-shdw-orng);
+
+          @include hover($white);
+        }
+
+        &.reset-btn,
+        &.del-btn,
+        &.equal-btn {
+          color: $white;
+        }
+
+        &.reset-btn,
+        &.del-btn {
+          background-color: $th-One-key-bg;
+
+          @include key-bxShdw($th-One-key-shdw);
+          @include hover(hsl(224, 51%, 76%));
+        }
+
+        &.equal-btn {
+          background-color: $th-One-key-red;
+
+          @include key-bxShdw($th-One-key-drkRed);
+          @include hover(hsl(6, 93%, 67%));
+        }
+      }
+    }
+  }
+}

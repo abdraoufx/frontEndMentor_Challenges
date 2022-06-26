@@ -1,0 +1,31 @@
+@use "./funcs" as *;
+
+// FlexBox Mixins
+@mixin full-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin spBeet {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Box Shadow Mixins
+@mixin key-bxShdw($color) {
+  box-shadow: inset 0rem rem(-3) 0rem 0rem $color;
+}
+
+// Hover Mixin
+@mixin hover($color) {
+  &:hover {
+    background-color: $color;
+  }
+}
+
+// Media Queries BreakPoints:
+@mixin ph-brk {
+  @media (max-width: rem(540)) {
+    @content;
+  }
+}

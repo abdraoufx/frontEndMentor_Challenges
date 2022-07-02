@@ -1,0 +1,152 @@
+@use "../helpers/funcs" as *;
+
+@use "../helpers/mixins" as *;
+
+@use "../variables/variables" as *;
+
+.lightbox {
+  position: fixed;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: rgb(0 0 0 / 75%);
+
+  box-shadow: 0 0 0 100vmax rgba($black, 0.75);
+
+  opacity: 0;
+
+  @include dir-col;
+  align-items: center;
+  gap: rem(15);
+
+  width: rem(482);
+
+  padding: 0 rem(17);
+
+  transition: all $trnsDu ease-in;
+
+  &.show-lg {
+    opacity: 1;
+
+    z-index: 2000;
+  }
+
+  @include ph-brk {
+    display: none !important;
+  }
+
+  .close-icon {
+    filter: brightness(100);
+
+    width: rem(17);
+
+    cursor: pointer;
+
+    align-self: flex-end;
+
+    transition: $trnsDu;
+
+    &:hover {
+      filter: invert(53%) sepia(79%) saturate(1061%) hue-rotate(344deg)
+        brightness(102%) contrast(92%);
+    }
+  }
+
+  .products {
+    height: rem(400);
+
+    width: 100%;
+
+    position: relative;
+
+    border-radius: rem(16);
+
+    > .product {
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+
+      opacity: 0;
+
+      border-radius: rem(16);
+
+      transition: opacity $trnsDu ease-in-out;
+
+      @include ph-brk {
+        max-height: 100%;
+        width: 100%;
+      }
+
+      &.show {
+        z-index: 5;
+
+        opacity: 1;
+      }
+    }
+
+    .switch-btns {
+      display: flex !important;
+
+      padding: 0;
+
+      width: calc(100% + rem(35));
+      left: rem(-17.5);
+    }
+  }
+
+  .thumbnails {
+    display: flex;
+    justify-content: space-between;
+
+    @include ph-brk {
+      display: none;
+    }
+    .image-container {
+      position: relative;
+
+      width: 20% !important;
+      min-width: rem(60);
+
+      border-radius: rem(14);
+
+      cursor: pointer;
+
+      &.active {
+        position: relative;
+
+        border: rem(2) solid $orange;
+
+        &::before {
+          width: 100%;
+        }
+      }
+
+      > img {
+        height: 100%;
+
+        border-radius: inherit;
+
+        transition: $trnsDu;
+      }
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+
+        background-color: rgba($lg-grsh-Blue, 0.7);
+
+        height: 100%;
+        width: 0%;
+
+        border-radius: rem(14);
+
+        transition: width $trnsDu ease-in-out;
+      }
+    }
+  }
+}

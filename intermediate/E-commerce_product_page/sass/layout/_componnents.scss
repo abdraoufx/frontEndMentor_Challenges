@@ -1,0 +1,55 @@
+@use "../helpers/funcs" as *;
+
+@use "../helpers/mixins" as *;
+
+@use "../variables/variables" as *;
+
+.orng-btn {
+  border-radius: rem(8);
+
+  background-color: $orange;
+  color: $white;
+
+  padding: rem(18) 0;
+
+  font-weight: bold;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.switch-btns {
+  position: absolute;
+  z-index: 100000;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 100%;
+
+  @include spBeet;
+  align-items: center;
+
+  display: none;
+
+  @include ph-brk {
+    display: flex;
+  }
+  .prev-btn,
+  .next-btn {
+    height: rem(35);
+    width: rem(35);
+
+    clip-path: circle();
+
+    &.not-allowed {
+      opacity: 0.5;
+
+      cursor: not-allowed;
+    }
+    > img {
+      width: rem(10);
+      height: rem(15);
+    }
+  }
+}

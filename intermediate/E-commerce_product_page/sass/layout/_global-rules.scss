@@ -1,0 +1,45 @@
+@use "../helpers/funcs" as *;
+
+* {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+main {
+  height: 100%;
+
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+
+  border: none;
+}
+
+.container {
+  max-width: rem(1170);
+
+  padding: 0 rem(20);
+  margin-inline: auto;
+}

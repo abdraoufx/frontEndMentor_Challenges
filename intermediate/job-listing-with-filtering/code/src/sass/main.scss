@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+@layer base {
+  html {
+    font-family: "League Spartan", sans-serif;
+  }
+}
+
+html,
+body,
+#root,
+.main-page {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+.clearTags::before {
+  content: "";
+
+  position: absolute;
+  bottom: 3px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 0%;
+  height: 1px;
+
+  transition: 0.3s ease-in-out;
+}

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/abdraoufx/frontEndMentor_Challenges/static/css/main.5d441399.css",
+    "main.js": "/abdraoufx/frontEndMentor_Challenges/static/js/main.a84d311e.js",
+    "index.html": "/abdraoufx/frontEndMentor_Challenges/index.html",
+    "main.5d441399.css.map": "/abdraoufx/frontEndMentor_Challenges/static/css/main.5d441399.css.map",
+    "main.a84d311e.js.map": "/abdraoufx/frontEndMentor_Challenges/static/js/main.a84d311e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d441399.css",
+    "static/js/main.a84d311e.js"
+  ]
+}

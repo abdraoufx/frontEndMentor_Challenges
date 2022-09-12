@@ -47,7 +47,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 # Job Listing With Filtering Challenge.
 
-### - Live Website [LINK](https://abdraoufx.github.io/frontEndMentor_Challenges/intermediate/job-listing-with-filtering)
+### - Live Website [LINK](https://abdraoufx.github.io/frontEndMentor_Challenges/intermediate/job-listing-with-filtering/build/)
 
 ### - Challenge [LINK](https://www.frontendmentor.io/solutions/responsive-url-shortening-apilanding-page-with-localstorage-and-scss-vVcXZipMDv)
 

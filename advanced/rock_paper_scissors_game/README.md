@@ -18,7 +18,7 @@ You will also see any lint errors in the console.
 
 ### - Live Website [LINK](https://abdraoufx.github.io/frontEndMentor_Challenges/advanced/rock_paper_scissors_game/build/)
 
-### - Challenge [LINK](https://www.frontendmentor.io/solutions/full-responsive-job-listings-with-filtering-reactts-and-tailwind-O_iDxX9rsE)
+### - Challenge [LINK](https://www.frontendmentor.io/solutions/responsive-rock-paper-scissors-bonus-design-with-react-ts-and-tailwind-IAn_QFA3-o)
 
 ## Design Image
 

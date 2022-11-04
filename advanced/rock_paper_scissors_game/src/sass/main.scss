@@ -1,0 +1,218 @@
+@use "./mixins/mixins" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .large-shadow {
+    box-shadow: 0 0 0 100vmax rgb(0 0 0 / 37%);
+  }
+
+  .picked-choice {
+    box-shadow: 0px 0px 0px 20px hsl(220, 35%, 26%),
+      0px 0px 0px 40px hsla(218, 36%, 25%, 0.51),
+      0px 0px 0px 60px hsla(218, 36%, 25%, 0.349);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+// Colors
+$lgGray: hsl(220, 5%, 89%);
+$dark: hsl(229, 25%, 31%);
+
+// Gradients
+$scissors_grd: hsl(39, 89%, 49%), hsl(40, 84%, 53%);
+$paper_grd: hsl(230, 89%, 62%), hsl(230, 89%, 65%);
+$rock_grd: hsl(349, 71%, 52%), hsl(349, 70%, 56%);
+$lizard_grd: hsl(261, 73%, 60%), hsl(261, 72%, 63%);
+$spock_grd: hsl(189, 59%, 53%), hsl(189, 58%, 57%);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+html,
+body,
+#root,
+.main-page {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto !important;
+}
+
+.radial-grd {
+  background: radial-gradient(
+    circle at 50% 10%,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+}
+
+.species > span {
+  line-height: 0.9;
+}
+
+.icon-container {
+  height: 82px;
+  width: 82px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  @include mb-brk {
+    height: 120px;
+    width: 120px;
+  }
+
+  &__scissors {
+    top: -20px;
+    left: 50%;
+
+    @include mb-brk {
+      top: -50px;
+    }
+  }
+  &__paper {
+    right: 2%;
+    top: 15%;
+
+    @include mb-brk {
+      right: -10%;
+    }
+  }
+  &__spock {
+    left: 2%;
+    top: 15%;
+
+    @include mb-brk {
+      left: -10%;
+    }
+  }
+  &__lizard {
+    left: 10%;
+    bottom: -10%;
+
+    @include mb-brk {
+      bottom: -20%;
+      left: 5%;
+    }
+  }
+  &__rock {
+    right: 10%;
+    bottom: -10%;
+
+    @include mb-brk {
+      bottom: -20%;
+      right: 5%;
+    }
+  }
+}
+
+.pentagon,
+.choice {
+  &__scissors {
+    background: linear-gradient(to bottom, $scissors_grd);
+  }
+  &__paper {
+    background: linear-gradient(to bottom, $paper_grd);
+  }
+  &__spock {
+    background: linear-gradient(to bottom, $spock_grd);
+  }
+  &__lizard {
+    background: linear-gradient(to bottom, $lizard_grd);
+  }
+  &__rock {
+    background: linear-gradient(to bottom, $rock_grd);
+  }
+  div > .img-wrapper,
+  .img-wrapper {
+    background-color: $lgGray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: inset 0px 2px 0px 0.5px rgba(0, 0, 0, 0.322);
+  }
+}
+
+.choice {
+  height: 100px;
+  width: 100px;
+
+  @include mb-brk {
+    height: 180px;
+    width: 180px;
+  }
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > {
+    .img-wrapper {
+      height: 80%;
+      width: 80%;
+      border-radius: 50%;
+
+      > img {
+        width: 40px;
+        @include mb-brk {
+          width: 65px;
+        }
+      }
+    }
+  }
+}
+
+.pentagon > {
+  div > .img-wrapper {
+    height: 75%;
+    width: 75%;
+
+    border-radius: 50%;
+
+    > img {
+      width: 30px;
+
+      @include mb-brk {
+        width: 40px;
+      }
+    }
+  }
+}
+
+.rules-explain {
+  @include mb-brk {
+    height: fit-content;
+    max-width: 400px;
+
+    padding: 20px 25px;
+
+    border-radius: 0.5rem;
+
+    > .title {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

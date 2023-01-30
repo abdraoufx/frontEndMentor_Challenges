@@ -5,7 +5,20 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+  width: 0.375rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(60, 180, 172, 0.9);
+  border-radius: 100vmax;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(176deg, 50%, 47%);
 }
 
 html,
@@ -25,7 +38,6 @@ body {
 
 body {
   font-family: "Commissioner", sans-serif;
-  scrollbar-width: 0;
 }
 
 ul {

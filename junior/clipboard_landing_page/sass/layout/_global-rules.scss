@@ -11,10 +11,6 @@ body {
   height: 100%;
 }
 
-:root {
-  scrollbar-width: none;
-}
-
 body,
 h1,
 h2,
@@ -25,12 +21,6 @@ p {
 
 body {
   font-family: "Bai Jamjuree", sans-serif; // 400, 600
-
-  scrollbar-width: 0;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 h1,

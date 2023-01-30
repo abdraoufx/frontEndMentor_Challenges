@@ -27,10 +27,6 @@ body {
   height: 100%;
 }
 
-:root {
-  scrollbar-width: none;
-}
-
 body,
 h1,
 h2,
@@ -41,11 +37,6 @@ p {
 
 body {
   font-family: "Bai Jamjuree", sans-serif;
-  scrollbar-width: 0;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 h1,
@@ -159,6 +150,23 @@ header .page-content__text {
     max-width: 38.125rem;
     margin: 0 auto 2.5rem;
   }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(230, 230, 230);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(38, 186, 164, 0.9);
+  border-radius: 100vmax;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(171deg, 66%, 44%);
 }
 
 header {

@@ -20,6 +20,24 @@ main {
 /* Importing Header */
 @import "./pages/header";
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(230, 230, 230);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba($stCyan, 0.9);
+
+  border-radius: 100vmax;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $stCyan;
+}
+
 header {
   background-image: url(../images/bg-header-mobile.png);
   background-repeat: no-repeat;

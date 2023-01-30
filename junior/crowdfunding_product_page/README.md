@@ -1,4 +1,4 @@
-# Blogr Landing Page Challenge.
+# Crowdfunding Product Page Challenge.
 
 ### - Live Website [LINK](https://abdraoufx.github.io/frontEndMentor_Challenges/junior/crowdfunding_product_page)
 

@@ -1,14 +1,14 @@
 # Job Listing With Filtering Challenge
 
-Welcome to the repository for the Job Listing With Filtering Challenge! This project showcases various job listings that can be filtered based on tags.
+Welcome to the repository for the Job Listing With Filtering Challenge! This project showcases job listings and allows you to filter them based on tags. It is built using React, Sass, Tailwind, and TypeScript.
 
 ## Live Demo
 
-You can view the live website for the Job Listing With Filtering Challenge [here](https://abdraoufx.github.io/frontEndMentor_Challenges/intermediate/job-listing-with-filtering/build/).
+You can explore the live website for the Job Listing With Filtering Challenge [here](https://abdraoufx.github.io/frontEndMentor_Challenges/intermediate/job-listing-with-filtering/build/).
 
 ## Challenge Details
 
-This project is a solution to the "Job Listing With Filtering" challenge from [Frontend Mentor](https://www.frontendmentor.io). The challenge involved creating a fully responsive job listing page where users can filter job listings by tags.
+This project is a solution to the "Job Listing With Filtering" challenge from [Frontend Mentor](https://www.frontendmentor.io). The challenge involved creating a responsive job listing page with the ability to filter jobs based on tags.
 
 ## Design Preview
 
@@ -18,22 +18,23 @@ This project is a solution to the "Job Listing With Filtering" challenge from [F
 
 The following technologies were used to build this project:
 
-- HTML: Used for structuring the content and layout of the page.
-- Sass: Used for styling and making the CSS more modular and maintainable.
-- JavaScript: Used for implementing interactive features and functionality.
+- React: Used as the JavaScript framework for building the user interface.
+- Sass: Used for styling the components and making the CSS more modular and maintainable.
+- Tailwind CSS: Utilized for rapid UI development and providing pre-built utility classes.
+- TypeScript: Used as the programming language, adding static typing and improved developer tooling.
 
 ## Features
 
 - Fully responsive layout that adapts to different screen sizes and devices.
 - Modern design with a clean and visually appealing user interface.
-- Use of Sass for efficient styling and organization of CSS code.
-- Filtering functionality to search and display job listings based on tags.
-- Interactive elements, such as buttons and job cards.
-- Implementation of React.js and TypeScript for efficient development.
+- Use of Sass and Tailwind CSS for efficient styling and component organization.
+- Interactive filtering functionality to refine job listings based on tags.
+- Seamless integration of React components for dynamic rendering of job listings.
+- Implementation of TypeScript for improved code quality and developer experience.
 
 ## Credits
 
 - Original challenge and design provided by [Frontend Mentor](https://www.frontendmentor.io).
 - Developed by [AbdeRaouf](https://github.com/abdraoufx).
 
-Feel free to explore the code and customize the job listing page according to your needs. If you have any questions or suggestions, please don't hesitate to reach out. Enjoy using the Job Listing With Filtering application!
+Feel free to explore the code and customize the job listing page according to your needs. If you have any questions or suggestions, please don't hesitate to reach out. Enjoy exploring job opportunities with the Job Listing With Filtering Challenge!

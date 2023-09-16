@@ -1,27 +1,40 @@
-# React + TypeScript + Vite
+# E-commerce Product Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![E-commerce Product Page Preview](public/design/desktop-design.jpg)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a simple E-commerce Product Page built using React, TypeScript, Sass, and Jest for testing. The primary functionality of this project allows users to:
 
-## Expanding the ESLint configuration
+- View product details and images.
+- Add the product to the shopping cart with a specified quantity.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Live Demo
 
-- Configure the top-level `parserOptions` property like this:
+You can access the live demo of this project [here](https://abdraoufx.github.io/frontEndMentor_Challenges/intermediate/E-commerce_product_page/dist/).
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Technologies Used
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- React: A JavaScript library for building user interfaces.
+- TypeScript (Ts): A statically typed superset of JavaScript.
+- Sass: A CSS preprocessor for more maintainable and organized styles.
+- Jest: A JavaScript testing framework for unit testing components and functionality.
+
+## Getting Started
+
+Follow these steps to get a copy of the project up and running on your local machine.
+
+1. Clone the repository:
+   git clone <repository-url>
+
+2. Install dependencies:
+   cd E-commerce_product_page
+   npm install
+
+3. Start the development server:
+   npm run dev
+   Open your browser and visit http://localhost:5173 to see the project in action.
+
+4. Testing:
+   To run the tests for this project, use the following command:
+   npm run test

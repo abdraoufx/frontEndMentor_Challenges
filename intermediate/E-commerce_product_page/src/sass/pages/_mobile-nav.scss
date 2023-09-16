@@ -1,0 +1,61 @@
+@use "../layout/colors" as *;
+@use "../helpers/mixins" as *;
+
+.mobile-nav,
+.mobile-nav-overlay {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  height: 100%;
+
+  transform: translateX(-100%);
+
+  opacity: 0;
+
+  transition: 500ms ease;
+
+  &.showed {
+    opacity: 1;
+
+    transform: translateX(0%);
+  }
+}
+
+.mobile-nav {
+  z-index: 101;
+
+  width: 70%;
+
+  background-color: $white;
+
+  padding: 25px;
+
+  max-width: 400px;
+
+  display: none;
+  @include mobile-to-med-break {
+    display: block;
+  }
+
+  &__close-icon {
+    margin-bottom: 55px;
+  }
+
+  &__list {
+    gap: 31px;
+
+    > li {
+      font: 19px "League Spartan", sans-serif;
+    }
+  }
+}
+
+.mobile-nav-overlay {
+  z-index: 100;
+
+  width: 100%;
+
+  background-color: rgba($color: $black, $alpha: 0.75);
+}

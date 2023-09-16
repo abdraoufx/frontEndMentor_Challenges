@@ -1,0 +1,42 @@
+// Media queries
+@mixin mobile-break {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin med-break {
+  @media (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptops-break {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin large-break {
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mobile-to-med-break {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin med-to-laptops-break {
+  @media (min-width: 481px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin custom-break($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

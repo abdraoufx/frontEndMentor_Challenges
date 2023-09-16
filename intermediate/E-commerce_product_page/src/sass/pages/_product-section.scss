@@ -1,0 +1,30 @@
+@use "../layout/colors" as *;
+@use "../helpers/mixins" as *;
+
+@use "./product-images" as *;
+@use "./product-details" as *;
+
+.product-section {
+  padding: 90px 47px;
+
+  @include mobile-break {
+    padding: 0;
+  }
+
+  gap: 125px;
+
+  @include med-break {
+    padding: 35px 20px;
+    gap: 50px;
+
+    justify-content: center;
+  }
+
+  @include laptops-break {
+    gap: 60px;
+  }
+
+  @include mobile-break {
+    gap: 25px;
+  }
+}

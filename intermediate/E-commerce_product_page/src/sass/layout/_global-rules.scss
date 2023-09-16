@@ -1,0 +1,40 @@
+// font family:  Kumbh Sans (400, 700)
+// font family:  League Spartan (700)
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Kumbh Sans";
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+body,
+#root {
+  overflow-x: hidden;
+}

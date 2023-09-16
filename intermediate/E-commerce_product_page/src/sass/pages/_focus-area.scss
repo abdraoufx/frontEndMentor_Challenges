@@ -1,0 +1,134 @@
+@use "../layout/colors" as *;
+@use "../helpers/mixins" as *;
+
+.focus-area {
+  $filterChangeImageToOrange: invert(51%) sepia(74%) saturate(867%)
+    hue-rotate(346deg) brightness(99%) contrast(104%);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  overflow: hidden auto;
+
+  z-index: 9;
+
+  height: 100vh;
+  width: 100%;
+
+  background-color: rgba($color: $black, $alpha: 0.75);
+
+  transition: 250ms ease;
+
+  opacity: 0;
+  pointer-events: none;
+
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  // container of content
+  > div {
+    align-items: flex-end;
+
+    @include med-break {
+      max-width: min(600px, 80%);
+    }
+  }
+
+  &__close-icon {
+    padding-top: 200px;
+
+    margin-bottom: 22px;
+
+    width: 20px;
+
+    cursor: pointer;
+
+    filter: brightness(100);
+
+    @include med-break {
+      padding-top: 20px;
+    }
+
+    &:hover {
+      filter: $filterChangeImageToOrange;
+    }
+  }
+
+  &__current-showed-img-container {
+    position: relative;
+
+    width: 460px;
+
+    @include laptops-break {
+      min-width: min(548px, 90%);
+    }
+
+    @include med-break {
+      max-width: min(458px, 80%);
+
+      margin: 0 auto 20px;
+    }
+
+    margin-bottom: 40px;
+
+    .showed-img {
+      border-radius: 15px;
+    }
+
+    $arrows-container-height: 55px;
+
+    .arrow-1-container,
+    .arrow-2-container {
+      width: $arrows-container-height;
+      height: $arrows-container-height;
+    }
+
+    .arrow-1-container {
+      left: calc(-1 * $arrows-container-height / 2);
+    }
+
+    .arrow-2-container {
+      right: calc(-1 * $arrows-container-height / 2);
+    }
+  }
+
+  &__thumbnails {
+    padding: 0 20px;
+
+    width: 100%;
+
+    @include med-break {
+      padding: 0 10px;
+    }
+
+    > div {
+      @include laptops-break {
+        width: 90px !important;
+        height: 90px !important;
+      }
+
+      width: 88px;
+
+      transition: 200ms ease-in;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:hover::before {
+        border: none;
+        width: 100%;
+        opacity: 0.5;
+      }
+
+      &.selected:hover::before {
+        border: 2px solid $vibrant-orange;
+        width: 100%;
+        opacity: 0.8;
+      }
+    }
+  }
+}

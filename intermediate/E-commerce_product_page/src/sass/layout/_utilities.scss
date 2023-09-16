@@ -1,0 +1,83 @@
+@use "../layout/colors" as *;
+
+.main-container {
+  max-width: min(100%, 1115px);
+  margin-inline: auto;
+}
+
+.fx-full-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fx-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fx-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fx-y-center {
+  display: flex;
+  align-items: center;
+}
+
+.fx-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.smoothy-transition {
+  transition: 250ms ease-in all;
+}
+
+.orange-scrollbar {
+  &::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $dark-brown;
+
+    border-radius: 100vmax;
+  }
+}
+
+.arrow-1-container,
+.arrow-2-container {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background-color: $white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  &:hover > img {
+    filter: invert(51%) sepia(74%) saturate(867%) hue-rotate(346deg)
+      brightness(99%) contrast(104%);
+  }
+}
+
+.arrow-1-container.no-less,
+.arrow-2-container.no-more {
+  > img {
+    opacity: 0.4;
+  }
+
+  &:hover > img {
+    filter: none;
+  }
+}

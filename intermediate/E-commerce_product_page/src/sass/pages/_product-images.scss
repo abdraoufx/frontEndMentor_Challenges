@@ -1,0 +1,139 @@
+@use "../layout/colors" as *;
+@use "../helpers/mixins" as *;
+
+@use "./focus-area" as *;
+
+.product-section {
+  &__images {
+    gap: 30px;
+
+    @include custom-break(481px, 510px) {
+      flex-direction: row;
+
+      gap: 18px;
+    }
+
+    @include med-to-laptops-break {
+      align-items: center;
+    }
+
+    .current-showed-img__wrapper {
+      position: relative;
+
+      cursor: pointer;
+
+      width: 445px;
+
+      @include mobile-break {
+        width: 100%;
+
+        cursor: auto;
+      }
+
+      @include med-to-laptops-break {
+        width: 340px;
+      }
+
+      $arrow-container-height: 40px;
+
+      .arrow-1-container,
+      .arrow-2-container {
+        display: none;
+
+        width: $arrow-container-height;
+        height: $arrow-container-height;
+
+        @include mobile-break {
+          display: flex;
+        }
+      }
+
+      .arrow-1-container {
+        left: 5%;
+      }
+      .arrow-2-container {
+        right: 5%;
+      }
+    }
+    .current-showed-img__wrapper__img {
+      border-radius: 18px;
+
+      @include mobile-break {
+        border-radius: 0;
+
+        aspect-ratio: 16 / 12;
+        object-fit: cover;
+      }
+    }
+
+    .thumbnails {
+      gap: 30px;
+
+      @include mobile-break {
+        position: absolute;
+        z-index: -1;
+        display: none;
+      }
+
+      @include custom-break(481px, 510px) {
+        flex-direction: column;
+      }
+
+      &__thumbnail-container {
+        position: relative;
+
+        height: 90px;
+        width: 90px;
+
+        @include laptops-break {
+          height: 70px;
+          width: 70px;
+        }
+
+        @include custom-break(481px, 510px) {
+          width: 80px;
+          height: 80px;
+        }
+
+        border-radius: 10px;
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+        > img {
+          border-radius: inherit;
+
+          cursor: pointer;
+        }
+
+        &.selected::before {
+          width: 100%;
+          opacity: 0.8;
+        }
+
+        &::before {
+          content: "";
+
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          width: 0%;
+          height: 100%;
+
+          background-color: $sky-blue;
+
+          border: 2px solid $vibrant-orange;
+          border-radius: inherit;
+
+          opacity: 0;
+
+          cursor: pointer;
+
+          transition: inherit;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+@use "../layout/colors" as *;
+@use "../helpers/mixins" as *;
+
+.product-section {
+  @include mobile-to-med-break {
+    flex-wrap: wrap;
+  }
+
+  &__details {
+    @include mobile-break {
+      // main container utility
+      max-width: min(90%, 1115px);
+      margin: 0 auto;
+    }
+
+    .company-name {
+      color: $vibrant-orange;
+
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      margin-bottom: 29px;
+
+      font-size: 14px;
+
+      @include med-to-laptops-break {
+        margin-bottom: 20px;
+      }
+
+      @include mobile-break {
+        font-size: 12px;
+
+        margin-bottom: 22px;
+      }
+    }
+
+    .product-name {
+      margin-bottom: 47px;
+
+      font-size: 42px;
+
+      line-height: 1.1;
+
+      @include med-to-laptops-break {
+        margin-bottom: 28px;
+        font-size: 30px;
+      }
+
+      @include mobile-break {
+        font-size: 25px;
+        margin-bottom: 28px;
+      }
+    }
+
+    .product-description {
+      font-size: 15px;
+
+      margin-bottom: 36px;
+
+      line-height: 1.5;
+
+      color: $light-blue;
+
+      @include med-to-laptops-break {
+        margin-bottom: 28px;
+      }
+
+      @include mobile-break {
+        margin-bottom: 37px;
+      }
+    }
+
+    .payment-details {
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+
+      margin-bottom: 40px;
+
+      @include mobile-break {
+        margin-bottom: 29px;
+      }
+
+      @include mobile-break {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .product-price,
+    .product-old-price {
+      font-family: "League Spartan";
+    }
+
+    .product-price {
+      gap: 17px;
+
+      &__cost,
+      &__discount-percentage {
+        font-weight: bold;
+      }
+
+      &__cost {
+        font-size: 30px;
+      }
+
+      &__discount-percentage {
+        color: $vibrant-orange;
+
+        background-color: $pale-orange;
+
+        padding: 5px 7px;
+
+        border-radius: 6px;
+      }
+    }
+
+    .product-old-price {
+      color: $light-slate;
+
+      font-weight: bold;
+      font-size: 17px;
+
+      text-decoration: line-through;
+    }
+
+    .buttons {
+      flex-wrap: wrap;
+      gap: 15px;
+
+      @include med-to-laptops-break {
+        justify-content: center;
+      }
+
+      @include med-break {
+        justify-content: flex-start;
+      }
+
+      @include mobile-break {
+        margin-bottom: 87px;
+      }
+
+      &__quantity-btn,
+      &__add-to-cart-btn {
+        border-radius: 10px;
+      }
+
+      &__quantity-btn {
+        min-width: min(156px, 100%);
+
+        padding: 18px 16px;
+
+        gap: 45px;
+
+        background-color: $sky-blue;
+
+        @include mobile-break {
+          width: 100%;
+
+          justify-content: space-between;
+        }
+
+        > img {
+          cursor: pointer;
+
+          transition: 200ms ease-in opacity;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+
+        > span {
+          font-weight: bold;
+        }
+      }
+
+      &__add-to-cart-btn {
+        flex: 1;
+        gap: 10px;
+
+        min-width: min(240px, 156px, 100%);
+
+        padding: 18px 0;
+
+        background-color: $vibrant-orange;
+        color: $white;
+
+        box-shadow: 0px 10px 30px 0px $vibrant-orange;
+
+        @include med-break {
+          max-width: 240px;
+        }
+
+        > {
+          img {
+            filter: brightness(100);
+
+            width: 16px;
+          }
+
+          span {
+            font-weight: bold;
+            font-size: 16px;
+          }
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}

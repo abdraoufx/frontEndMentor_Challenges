@@ -35,7 +35,8 @@ You can find my completed challenges on my [FrontendMentor profile](https://www.
 
 1. Challenge 1 - [Calculator app with multiple themes](intermediate/Calculator_App)
 2. Challenge 2 - [URL shortening API landing page](intermediate/URL_shortening_API_landing_page)
-3. Challenge 3 - [Job Listing With Filtering](intermediate/job-listing-with-filtering)
+3. Challenge 3 - [E Commerce Product Page](intermediate/E-Commerce_product_page)
+4. Challenge 4 - [Job Listing With Filtering](intermediate/job-listing-with-filtering)
 
 ### Advanced Level Challenges
 
